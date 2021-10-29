@@ -1,0 +1,13 @@
+Cellular Component	Mus musculus - REFLIST (22296)	Client Text Box Input (384)	Client Text Box Input (expected)	Client Text Box Input (over/under)	Fold_enrichment	Client Text Box Input (raw P-value)	FDR	Status
+Condensed nuclear chromosome kinetochore	9	4	0.16	+	25.81	5.13E-05	5.74E-03	Downregulated
+"Condensed nuclear chromosome, centromeric region"	13	4	0.22	+	17.87	1.62E-04	8.05E-03	Downregulated
+Microtubule associated complex	59	9	1.02	+	8.86	2.13E-06	9.52E-04	Downregulated
+Nuclear chromosome 	130	10	2.24	+	4.47	1.40E-04	7.86E-03	Downregulated
+Microtubule 	156	11	2.69	+	4.09	1.36E-04	8.70E-03	Downregulated
+Neuron projection 	193	12	3.32	+	3.61	2.07E-04	8.45E-03	Downregulated
+Microtubule cytoskeleton 	326	18	5.61	+	3.21	2.63E-05	3.92E-03	Downregulated
+Collagen trimer 	12	6	0.3	+	20.01	2.95E-06	4.41E-04	Upregulated
+Collagen-containing extracellular matrix 	33	12	0.82	+	14.56	5.40E-10	1.21E-07	Upregulated
+Extracellular matrix 	152	27	3.8	+	7.11	3.73E-14	1.67E-11	Upregulated
+Receptor complex 	175	13	4.37	+	2.97	7.42E-04	4.15E-02	Upregulated
+Extracellular region 	1347	55	33.65	+	1.63	4.64E-04	3.46E-02	Upregulated

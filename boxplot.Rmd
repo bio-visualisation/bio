@@ -1,0 +1,105 @@
+---
+title: "Boxplot"
+output:
+  html_document:
+    toc: yes
+    toc_float: yes
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+<br>
+Created by <p style="color:blue">*Budhaditya Basu*.</p>
+
+*****
+
+
+Here I have tried to show how a box plot can be generated using R code. I have tried to make it very simple. The layers of code have been added step wise with the explanation. If you have any question, please feel free to ask me. Let us start.    
+     
+Open RStudio, select `File/New File/R Script` and start writing your script with the help of this tutorial.
+
+
+# Loading Packages
+
+
+A **package** is a bundle of commands that provide extra functionality. A package can be installed by typing `install.packages("package-name")`. Here, the 'ggpubr' package is used to generate a publication ready plot based on 'ggplot2'.
+
+```{r}
+library(ggpubr)
+```
+
+
+# Importing data
+
+```{r}
+df <- read.csv("explant.txt", sep = "\t", header = T) ##The columns are tab separated, and contains header
+```
+
+To check the first 20 data, we can use `head()` function.
+
+
+```{r}
+head(df, 20)
+```
+
+# Plotting
+
+
+To plot the data, we use `ggplot()` function. Define the X and Y axis within aes().
+
+```{r}
+ggplot(data = df, aes(x = Type, y = Value))
+```
+
+Unless you specify what type of graph is needed, an empty plot will be generated. Let's add the following code  
+
+```{r}
+ggplot(data = df, aes(x = Type, y = Value))+
+  geom_boxplot(aes(color = Sample))
+```
+
+# Addition of layers
+
+```{r}
+ggplot(data = df, aes(x = Type, y = Value))+
+  geom_boxplot(aes(color = Sample))+
+  geom_jitter()
+```
+
+The jitters are quite messy here. We need to specify the jitter by the sample type and bring order.   
+
+```{r}
+p <- ggplot(data = df, aes(x = Type, y = Value))+
+     geom_boxplot(aes(color = Sample))+
+     geom_jitter(aes(color = Sample),
+                 position = position_jitterdodge(jitter.width = 0.2, 
+                                                 dodge.width = 0.8)) #Here we are creating a dodged jitter points with position_jitterdodge()
+p
+```
+
+# Change theme
+
+```{r}
+p + theme_classic()
+```
+
+# Legend, axis modify
+
+```{r}
+p + 
+  theme_classic()+
+  theme(legend.title = element_blank(), # Remove legend title
+        axis.text.x = element_text(angle = 45, hjust=1))+ #X-axis element rotated 45 degree
+  xlab("")+ #Remove X axis title
+  ylab("Length in micrometer") #Modify Y-axis title
+```
+
+**********
+
+This plot can be found in the following article:
+
+**Pax6 Modulates Intra-Retinal Axon Guidance and Fasciculation of Retinal Ganglion Cells during Retinogenesis** <br>
+<i class="fas fa-link"></i> [nature.com/articles](https://doi.org/10.1038/s41598-020-72828-4)
+

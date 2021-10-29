@@ -1,0 +1,38 @@
+name: "Personal website"
+output_dir: "docs"
+navbar:
+  title: ""
+  left:
+    - text: "Home"
+      icon: fa-home
+      href: index.html
+      menu:
+        - text: "Personal Details"
+        - text: "About Me"
+          href: Aboutme.html
+        - text: "Resume"
+          href: Budhaditya_resume.html
+        - text: "Gallery"
+          href: gallery.html
+          
+    - text: "Learn R" 
+      icon: fab fa-r-project
+      menu:
+        - text: "Tutorials"
+          href: Tutorials.html
+        - text: "------------"
+        - text: "Data Visualization"
+        - text: "Box Plot"
+          href: boxplot.html
+        - text: "Violin Plot"
+          href: violin.html
+        - text: "Beads in string"
+          href: beads.html
+  
+  right: 
+    - text: "Data Visualization Application"
+      href: https://1c8ogh-budhaditya-basu.shinyapps.io/scb_lab/?_ga=2.16546806.1332503414.1634207746-1453024069.1631416750
+      
+output:
+ html_document:
+   theme: cosmo

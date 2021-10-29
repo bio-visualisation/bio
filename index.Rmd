@@ -1,0 +1,20 @@
+---
+title: "Home"
+---
+
+<p align = "justify">This page is developed for sharing some useful resources for learning R, statistics, data visualization and biological sequence analysis. This is just a place for me to collate some of the best websites/ tutorials that I have found useful during my research. This includes a lot of links and hard work done by the dedicated R community and I just use only a subset of codes that is relevant for my work. In the spirit of learning process, I created these bunch of pages in R markdown file and of course I failed initially, googled thousand times, tried lots of code chunks and that is the process of learning R.</p>
+
+****
+
+**Contact info** <br><br>
+<i class="fas fa-envelope fa"></i> &nbsp; budhadityabasu93@gmail.com
+
+<i class="fab fa-github fa"></i> &nbsp;<a href="https://github.com/bio-visualisation"> github.com/bio-visualisation </a>
+
+<i class="fab fa-twitter fa"></i> &nbsp;<a href = "https://twitter.com/VizBio"> twitter.com/VizBio </a>
+
+<i class="fas fa-phone fa"></i> &nbsp;07907547176
+
+<i class="fas fa-map-marker-alt"></i> &nbsp; Neuro Stem Cell Biology Lab, Rajiv Gandhi Centre for Biotechnology,<br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Thiruvananthapuram, Kerala - 695014
+
+

@@ -1,0 +1,102 @@
+---
+title: "Beads in string"
+output:
+  html_document:
+    toc: yes
+    toc_float: yes
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+<br>
+Created by <p style="color:blue">*Budhaditya Basu*.</p>
+
+*****
+
+Open RStudio, select `File/New File/R Script` and start writing your script with the help of this tutorial.
+
+# Loading Packages
+
+```{r, echo = TRUE}
+library(ggplot2)
+```
+
+# Importing data
+
+The tab delimited data frame 'Panther_CC.txt' is assigned to a vector df.
+
+```{r}
+df <- read.csv("Panther_CC.txt", sep = "\t", header = TRUE)#The columns are tab separated, and contains header
+```
+
+To check the first few data, we can use `head()` function.
+
+
+```{r}
+head(df)
+```
+
+# Plotting
+
+
+To plot the data, we use `ggplot()` function. Define the X and Y axis within aes().
+
+```{r}
+ggplot(data = df, aes(x = Status, y = Cellular.Component, fill = FDR,
+                    size= Fold_enrichment)) #Fill the color based on FDR value & based on fold enrichment point size will differ
+```
+
+# Choose the shape of points
+
+Here we are going to use a filled circle (shape = 21). Shape 19 is solid circle, shape 20 is smaller solid circle, which I don't want to use. The shape size from 21 to 25 can be colored and filled with different colors.
+
+```{r}
+p  <- ggplot(data = df, aes(x = Status, y = Cellular.Component, 
+                            fill = FDR, size= Fold_enrichment))+
+  geom_point(shape=21)
+p
+```
+
+# Help about geom_points
+To get more details of point shapes, you can use `help(point)`.
+
+<br><br><br>
+# Change theme and fill color
+```{r}
+p + theme_bw() + #Change theme to black and white
+  scale_fill_gradient2(low="darkcyan",mid ="red", high="blue")# Define fill color
+```
+
+# Remove X and Y axis title 
+```{r}
+p + theme_bw() +
+  scale_fill_gradient2(low="darkcyan",mid ="red", high="blue")+
+  xlab("")+ ylab("")
+```
+
+**The above plot needs to be modified as following:** <br>
+1. Change the order of X-axis element i.e., Upregulated first and then Downregulated. <br>
+2. Rotate Upregulated and Downregulated text 45 degree. <br>
+3. Provide a title and sub title of the plot. <br>
+4. Change the legend title. I want to change from 'Fold_enrichment' to 'Fold Enrichment'.
+
+# Rotate the X-axis element
+```{r}
+p + theme_bw() +
+  scale_fill_gradient2(low="darkcyan",mid ="red", high="blue")+
+  xlab("")+ ylab("")+
+  theme(axis.text.x = element_text(angle = 45, hjust=1))+ # Rotate X-axis element
+  scale_x_discrete(limits=c("Upregulated","Downregulated"))+ #Change the order 
+  labs(title = "Gene Ontology",
+       subtitle = "Cellular Component")+ # Add title and subtitle
+  labs(size="Fold Enrichment", fill="FDR") #change legend title and order
+```
+
+**********
+
+This plot can be found in the following article:
+
+**Pax6 Modulates Intra-Retinal Axon Guidance and Fasciculation of Retinal Ganglion Cells during Retinogenesis** <br>
+<i class="fas fa-link"></i> [nature.com/articles](https://doi.org/10.1038/s41598-020-72828-4)

@@ -1,0 +1,29 @@
+---
+title: "Tutorials"
+---
+
+<i class="fas fa-link"></i> **Some useful links for learning R and data visualization**
+
+- [learnr4free](https://www.learnr4free.com/index.html) &nbsp; A bundle of resources
+- [r-bootcamp](https://r-bootcamp.netlify.app/)
+- [rladiessydney.org](https://rladiessydney.org/courses/ryouwithme/)
+- [bigbookofr](https://www.bigbookofr.com/)
+- [Data Visualization](https://socviz.co/index.html#preface)&nbsp; A nice book on data visualization
+
+*************
+
+<i class="fas fa-link"></i> My favorite resources
+
+- [ourcodingclub.github.io](https://ourcodingclub.github.io/tutorials.html)
+- [www.sthda.com](http://www.sthda.com/english/)
+
+*************
+
+<i class="fas fa-link"></i> My favorite statistics books
+
+- [Introduction to Modern Statistics](https://openintro-ims.netlify.app/)
+- [Learning Statistics with R ](https://learningstatisticswithr.com/)
+
+
+
+

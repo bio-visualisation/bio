@@ -1,0 +1,15 @@
+---
+title: "Good old memories"
+---
+
+<img src="files/1.jpg">
+A visit to "Root Bridge" at Meghalaya.
+<br><br><br>
+<img src="files/2.jpg">
+Friends' day out.
+<br><br><br>
+<img src="files/3.jpg">
+Science Day Expo.
+<br><br><br>
+<img src="files/5.jpg">
+RGCB Merit Award 2019

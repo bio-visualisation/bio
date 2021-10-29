@@ -1,0 +1,130 @@
+---
+title: "Violin plot"
+output:
+  html_document:
+    toc: yes
+    toc_float: yes
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+<br>
+Created by <p style="color:blue">*Budhaditya Basu*.</p>
+
+*****
+
+
+
+Open RStudio, select `File/New File/R Script` and start writing your script with the help of this tutorial.
+
+# Loading Packages
+
+```{r, echo = TRUE}
+library(ggpubr)
+```
+
+# Importing data
+
+The tab delimited data frame 'axon.txt' is assigned to a vector df.
+
+
+```{r}
+df <- read.csv("axon.txt", sep = "\t", header = TRUE) 
+#The columns are tab separated, and contains header
+```
+
+To check the first few data, we can use `head()` function.
+
+
+```{r}
+head(df)
+```
+
+# Plotting
+
+
+To plot the data, we use `ggplot()` function. Define the X and Y axis within aes()
+
+
+```{r}
+ggplot(data = df, aes(x=Retina, y=Diameter))
+```
+
+Let's add the code for the type of graph we need. We are going to plot a violin plot. So the code will look like the following.
+
+
+```{r}
+ggplot(data = df, aes(x=Retina, y=Diameter))+
+  geom_violin()
+```
+
+# Addition of layers
+## Add box plot
+
+To add a box plot within the violin plot:
+
+```{r}
+ggplot(data = df, aes(x=Retina, y=Diameter))+
+  geom_violin()+
+  geom_boxplot(width = 0.1)
+```
+
+Change violin plot colors by groups within the column 'Retina' 
+
+```{r}
+ggplot(data = df, aes(x=Retina, y=Diameter, fill = Retina))+
+  geom_violin()+
+  geom_boxplot(width = 0.1)
+```
+
+## Add jitters
+If we want to see individual data points along with the previous plot, add jitters to it. 
+```{r}
+p <- ggplot(data = df, aes(x=Retina, y=Diameter, fill = Retina))+
+     geom_violin()+
+     geom_boxplot(width = 0.1)+
+     geom_jitter(position=position_jitter(0.1),
+              color="red", size=0.7, alpha=0.5) # 0.1 : degree of jitter in x direction
+
+p
+```
+
+## Change theme and remove legend
+
+```{r}
+p + 
+  theme_classic()+
+  theme(legend.position = "none")
+```
+
+Change the order of groups in the X axis and give defined colors to it
+
+```{r}
+p +
+  theme_classic()+
+  theme(legend.position = "none")+
+  scale_x_discrete(limits=c("WT OD", "KO OD" ,"WT Periphery", "KO periphery")) + 
+  scale_fill_manual(values=c("gray87", "gray87", "lightblue", "lightblue"))
+```
+
+## Add title
+
+```{r}
+p +
+  theme_classic()+
+  theme(legend.position = "none")+
+  scale_x_discrete(limits=c("WT OD", "KO OD" ,"WT Periphery", "KO periphery")) + 
+  scale_fill_manual(values=c("gray87", "gray87", "lightblue", "lightblue"))+
+  ggtitle("Violin plot") +
+  xlab("")+ ylab("Diameter in micrometer")
+```
+
+**********
+
+This plot can be found in the following article:
+
+**Pax6 Modulates Intra-Retinal Axon Guidance and Fasciculation of Retinal Ganglion Cells during Retinogenesis** <br>
+<i class="fas fa-link"></i> [nature.com/articles](https://doi.org/10.1038/s41598-020-72828-4)
+
