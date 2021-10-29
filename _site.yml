@@ -6,8 +6,8 @@ navbar:
     - text: "Home"
       icon: fa-home
       href: index.html
+    - text: "Personal Details"
       menu:
-        - text: "Personal Details"
         - text: "About Me"
           href: Aboutme.html
         - text: "Resume"
