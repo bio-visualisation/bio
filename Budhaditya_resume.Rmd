@@ -166,6 +166,17 @@ N/A
 
 Workshops {data-icon=group}
 ------------------------------------
+
+### International Training Workshop On Single Cell Transcriptomics
+
+National Institute of Biomedical Genomics, India & <br>Massachusetts Institute of Technology, USA<br>
+*Supported by Human Cell Atlas*
+
+N/A
+
+January 2022
+
+
 ### Big Data Analysis in Life Science and Healthcare
 
 Building Bharat Boston Bioscience (B4) Program<br>
@@ -175,33 +186,30 @@ N/A
 
 March 2021
 
-### RNA-Seq Data Analysis Hands-on Workshop
+[B4 Program link](https://mittalsouthasiainstitute.harvard.edu/b4-2021-workshop-on-big-data-in-life-sciences-healthcare/)
 
-Massive Data Anlytics | University of Kerala
-
-Trivandrum, India
-
-Sept 2019
 
 ### Hands-on RNA-Seq data analysis with R programming
 
 Institute of Bioinformatics and Applied Biotechnology (IBAB)
 
-Bangalore, India
+N/A
 
 June 2019
 
-::: aside
+Bangalore, India
 
-:::
+
 
 ### Certificate Course on Laboratory Animal Science
 
-Animal Research Facility<br>Rajiv Gandhi Centre for Biotechnology
+Animal Research Facility | Rajiv Gandhi Centre for Biotechnology
+
+N/A
+
+December 2017
 
 Trivandrum, India
-
-Dec 2017
 
 
 
