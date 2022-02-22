@@ -16,7 +16,7 @@ navbar:
           href: gallery.html
     - text: "Publications"
       href: publication.html
-    - text: "Learn R" 
+    - text: "Learn R"
       icon: fab fa-r-project
       menu:
         - text: "Tutorials"
