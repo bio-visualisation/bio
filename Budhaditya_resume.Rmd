@@ -146,15 +146,15 @@ Gurgaon, India
 Expertise {data-icon=flask}
 -----------------------------------
 ### Laboratory Techniques
-
-<b>Cell Culture</b><br><i class="fas fa-caret-right"></i>HEK293T cell line, Primary neurons from hippocampus and retina<br><i class="fas fa-caret-right"></i>Lentivirus preparation & concentration<br><i class="fas fa-caret-right"></i> Adeno-associated virus (AAV) preparation & concentration<br>
-<b>Molecular techniques</b><br>
+**Cell Culture**<br>
+<i class="fas fa-caret-right"></i>HEK293T cell line, Primary neurons from hippocampus and retina<br><i class="fas fa-caret-right"></i>Lentivirus preparation & concentration<br><i class="fas fa-caret-right"></i> Adeno-associated virus (AAV) preparation & concentration<br>
+**Molecular techniques**<br>
 <i class="fas fa-caret-right"></i>Traditional and Infusion Cloning<br>
 <i class="fas fa-caret-right"></i>Immunocytochemistry,FISH<br>
 <b>Transgenic lines </b> <br><i class="fas fa-caret-right"></i>Maintenance, breeding, ear-tagging & genotyping<br>
-<b>Laboratory Animals</b><br>
+**Laboratory Animals**<br>
 <i class="fas fa-caret-right"></i>Maintaining & breeding for timed pregnant experiments<br>
-<b>Expression studies</b><br>
+**Expression studies**<br>
 <i class="fas fa-caret-right"></i>Western Blot & Densitometric analysis<br><i class="fas fa-caret-right"></i>qRT-PCR
 
 N/A
