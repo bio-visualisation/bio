@@ -1,0 +1,1761 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>intro2R.knit</title>
+    <meta charset="utf-8" />
+    <script src="site_libs/header-attrs-2.13/header-attrs.js"></script>
+    <link href="site_libs/remark-css-0.0.1/default.css" rel="stylesheet" />
+    <link href="site_libs/remark-css-0.0.1/default-fonts.css" rel="stylesheet" />
+  </head>
+  <body>
+    <textarea id="source">
+
+
+class: center, bottom
+background-image: url("start.jpg")
+&lt;span style="font-size: 50pt; "&gt;See What You R&lt;/span&gt; &lt;br&gt;&lt;br&gt;
+&lt;span style="font-size: 20pt; "&gt;Budhaditya Basu&lt;/span&gt;
+
+
+
+&lt;img src="rgcb.png" width="15%" align="left"/&gt;
+
+
+---
+
+#My Inspiration
+
+&lt;img src="danielle.jpg" width="30%" align= "left"/&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;
+&lt;pre class="tab"&gt;&lt;span style="font-size: 30pt; "&gt;Danielle Navarro&lt;/span&gt;&lt;/pre&gt;
+&lt;br&gt;&lt;br&gt;&lt;br&gt;
+
+&lt;img src="cedric.png" width="30%" align="right"/&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt; 
+&lt;pre class="tab"&gt;&lt;span style="font-size: 30pt; "&gt;       Cédric Scherer &lt;/span&gt;&lt;/pre&gt;
+
+
+---
+
+class: center, middle
+
+&lt;span style="font-size: 90pt; color: steelblue "&gt;1.  Install R &lt;/span&gt;
+--
+
+
+<svg aria-hidden="true" role="img" viewBox="0 0 581 512" style="height:1em;width:1.13em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:steelblue;overflow:visible;position:relative;"><path d="M581 226.6C581 119.1 450.9 32 290.5 32S0 119.1 0 226.6C0 322.4 103.3 402 239.4 418.1V480h99.1v-61.5c24.3-2.7 47.6-7.4 69.4-13.9L448 480h112l-67.4-113.7c54.5-35.4 88.4-84.9 88.4-139.7zm-466.8 14.5c0-73.5 98.9-133 220.8-133s211.9 40.7 211.9 133c0 50.1-26.5 85-70.3 106.4-2.4-1.6-4.7-2.9-6.4-3.7-10.2-5.2-27.8-10.5-27.8-10.5s86.6-6.4 86.6-92.7-90.6-87.9-90.6-87.9h-199V361c-74.1-21.5-125.2-67.1-125.2-119.9zm225.1 38.3v-55.6c57.8 0 87.8-6.8 87.8 27.3 0 36.5-38.2 28.3-87.8 28.3zm-.9 72.5H365c10.8 0 18.9 11.7 24 19.2-16.1 1.9-33 2.8-50.6 2.9v-22.1z"/></svg>
+=
+<svg aria-hidden="true" role="img" viewBox="0 0 512 512" style="height:1em;width:1em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:red;overflow:visible;position:relative;"><path d="M462.3 62.6C407.5 15.9 326 24.3 275.7 76.2L256 96.5l-19.7-20.3C186.1 24.3 104.5 15.9 49.7 62.6c-62.8 53.6-66.1 149.8-9.9 207.9l193.5 199.8c12.5 12.9 32.8 12.9 45.3 0l193.5-199.8c56.3-58.1 53-154.3-9.8-207.9z"/></svg>
+
+
+--
+
+Install **R** from R project homepage:
+https://cran.r-project.org/
+
+--
+
+
+You are recommended to use the [RStudio IDE](https://www.rstudio.com/products/rstudio/) 
+
+---
+
+class: center, middle
+# Get Started
+
+.footnote[
+<svg preserveAspectRatio="none" aria-hidden="true" role="img" viewBox="0 0 581 512" style="height:30px;width:35px;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:steelblue;overflow:visible;position:relative;"><path d="M581 226.6C581 119.1 450.9 32 290.5 32S0 119.1 0 226.6C0 322.4 103.3 402 239.4 418.1V480h99.1v-61.5c24.3-2.7 47.6-7.4 69.4-13.9L448 480h112l-67.4-113.7c54.5-35.4 88.4-84.9 88.4-139.7zm-466.8 14.5c0-73.5 98.9-133 220.8-133s211.9 40.7 211.9 133c0 50.1-26.5 85-70.3 106.4-2.4-1.6-4.7-2.9-6.4-3.7-10.2-5.2-27.8-10.5-27.8-10.5s86.6-6.4 86.6-92.7-90.6-87.9-90.6-87.9h-199V361c-74.1-21.5-125.2-67.1-125.2-119.9zm225.1 38.3v-55.6c57.8 0 87.8-6.8 87.8 27.3 0 36.5-38.2 28.3-87.8 28.3zm-.9 72.5H365c10.8 0 18.9 11.7 24 19.2-16.1 1.9-33 2.8-50.6 2.9v-22.1z"/></svg>
+]
+
+--
+
+Open R Studio
+
+--
+
+&lt;span style="color: dodgerblue;"&gt;File &gt; New File &gt; R Script&lt;/span&gt;
+
+---
+
+#Variable Assignment
+
+.footnote[
+<svg preserveAspectRatio="none" aria-hidden="true" role="img" viewBox="0 0 581 512" style="height:30px;width:35px;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#E33D85;overflow:visible;position:relative;"><path d="M581 226.6C581 119.1 450.9 32 290.5 32S0 119.1 0 226.6C0 322.4 103.3 402 239.4 418.1V480h99.1v-61.5c24.3-2.7 47.6-7.4 69.4-13.9L448 480h112l-67.4-113.7c54.5-35.4 88.4-84.9 88.4-139.7zm-466.8 14.5c0-73.5 98.9-133 220.8-133s211.9 40.7 211.9 133c0 50.1-26.5 85-70.3 106.4-2.4-1.6-4.7-2.9-6.4-3.7-10.2-5.2-27.8-10.5-27.8-10.5s86.6-6.4 86.6-92.7-90.6-87.9-90.6-87.9h-199V361c-74.1-21.5-125.2-67.1-125.2-119.9zm225.1 38.3v-55.6c57.8 0 87.8-6.8 87.8 27.3 0 36.5-38.2 28.3-87.8 28.3zm-.9 72.5H365c10.8 0 18.9 11.7 24 19.2-16.1 1.9-33 2.8-50.6 2.9v-22.1z"/></svg>
+]
+
+--
+
+.pull-left[
+
+```r
+num &lt;- 2
+
+num
+```
+
+```
+## [1] 2
+```
+]
+
+--
+
+.pull-right[
+
+- num is called&lt;span style="color: deeppink;"&gt; "variable"&lt;/span&gt;
+
+- &lt;- is &lt;span style="color: deeppink;"&gt;"assignment operator"&lt;/span&gt;
+
+
+]
+
+
+--
+
+.pull-left[
+
+
+```r
+150 -&gt; fruits
+
+fruits
+```
+
+```
+## [1] 150
+```
+]
+
+--
+.pull-right[
+
+- Both operators are same.
+
+- Simply "left-form" and "right-form"
+
+]
+
+--
+
+-----------------------------------------
+
+--
+
+&gt; Please don't insert space in the middle of an "operator"
+
+---
+
+#Variable types in R
+
+.footnote[
+<svg preserveAspectRatio="none" aria-hidden="true" role="img" viewBox="0 0 581 512" style="height:30px;width:35px;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#E33D85;overflow:visible;position:relative;"><path d="M581 226.6C581 119.1 450.9 32 290.5 32S0 119.1 0 226.6C0 322.4 103.3 402 239.4 418.1V480h99.1v-61.5c24.3-2.7 47.6-7.4 69.4-13.9L448 480h112l-67.4-113.7c54.5-35.4 88.4-84.9 88.4-139.7zm-466.8 14.5c0-73.5 98.9-133 220.8-133s211.9 40.7 211.9 133c0 50.1-26.5 85-70.3 106.4-2.4-1.6-4.7-2.9-6.4-3.7-10.2-5.2-27.8-10.5-27.8-10.5s86.6-6.4 86.6-92.7-90.6-87.9-90.6-87.9h-199V361c-74.1-21.5-125.2-67.1-125.2-119.9zm225.1 38.3v-55.6c57.8 0 87.8-6.8 87.8 27.3 0 36.5-38.2 28.3-87.8 28.3zm-.9 72.5H365c10.8 0 18.9 11.7 24 19.2-16.1 1.9-33 2.8-50.6 2.9v-22.1z"/></svg>
+]
+
+--
+- &lt;span style="color: blue;"&gt;int&lt;/span&gt; for integers.
+
+- &lt;span style="color: blue;"&gt;dbl&lt;/span&gt; for doubles or real numbers.
+
+- &lt;span style="color: blue;"&gt;chr&lt;/span&gt; for character
+
+- &lt;span style="color: blue;"&gt;dttm&lt;/span&gt; for date-time
+
+- &lt;span style="color: blue;"&gt;lgl&lt;/span&gt; for logical vectors like TRUE or FALSE
+
+- &lt;span style="color: blue;"&gt;fct&lt;/span&gt; for categorical variables
+
+
+---
+
+#Convention for naming variables
+
+.footnote[
+<svg preserveAspectRatio="none" aria-hidden="true" role="img" viewBox="0 0 581 512" style="height:30px;width:35px;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#E33D85;overflow:visible;position:relative;"><path d="M581 226.6C581 119.1 450.9 32 290.5 32S0 119.1 0 226.6C0 322.4 103.3 402 239.4 418.1V480h99.1v-61.5c24.3-2.7 47.6-7.4 69.4-13.9L448 480h112l-67.4-113.7c54.5-35.4 88.4-84.9 88.4-139.7zm-466.8 14.5c0-73.5 98.9-133 220.8-133s211.9 40.7 211.9 133c0 50.1-26.5 85-70.3 106.4-2.4-1.6-4.7-2.9-6.4-3.7-10.2-5.2-27.8-10.5-27.8-10.5s86.6-6.4 86.6-92.7-90.6-87.9-90.6-87.9h-199V361c-74.1-21.5-125.2-67.1-125.2-119.9zm225.1 38.3v-55.6c57.8 0 87.8-6.8 87.8 27.3 0 36.5-38.2 28.3-87.8 28.3zm-.9 72.5H365c10.8 0 18.9 11.7 24 19.2-16.1 1.9-33 2.8-50.6 2.9v-22.1z"/></svg>
+]
+
+--
+
+.pull-left[
+
+
+```r
+my_name &lt;- "Budhaditya"
+
+my_weight &lt;- 66.678
+
+print(my_name)
+```
+
+```
+## [1] "Budhaditya"
+```
+
+]
+
+--
+.pull-right[
+
+- It cannot include &lt;span style="color: deeppink;"&gt;space&lt;/span&gt;. &lt;br&gt;&lt;br&gt;
+  e.g. &lt;span style="color: blue;"&gt;"my sale"&lt;/span&gt; is not valid. But &lt;br&gt;&lt;br&gt;&lt;span style="color: blue;"&gt;"my_sale"&lt;/span&gt; or &lt;span style="color: blue;"&gt;"my.sale"&lt;/span&gt; is perfect
+ ] 
+
+--
+.pull-left[
+
+
+```r
+"cat" == "cat"
+```
+
+```
+## [1] TRUE
+```
+
+```r
+"cat" == "CAT"
+```
+
+```
+## [1] FALSE
+```
+]
+
+--
+.pull-right[
+&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;
+- It is &lt;span style="color: deeppink;"&gt;case sensitive&lt;/span&gt;.
+
+]
+
+---
+
+#Vector
+
+.footnote[
+<svg preserveAspectRatio="none" aria-hidden="true" role="img" viewBox="0 0 581 512" style="height:30px;width:35px;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#E33D85;overflow:visible;position:relative;"><path d="M581 226.6C581 119.1 450.9 32 290.5 32S0 119.1 0 226.6C0 322.4 103.3 402 239.4 418.1V480h99.1v-61.5c24.3-2.7 47.6-7.4 69.4-13.9L448 480h112l-67.4-113.7c54.5-35.4 88.4-84.9 88.4-139.7zm-466.8 14.5c0-73.5 98.9-133 220.8-133s211.9 40.7 211.9 133c0 50.1-26.5 85-70.3 106.4-2.4-1.6-4.7-2.9-6.4-3.7-10.2-5.2-27.8-10.5-27.8-10.5s86.6-6.4 86.6-92.7-90.6-87.9-90.6-87.9h-199V361c-74.1-21.5-125.2-67.1-125.2-119.9zm225.1 38.3v-55.6c57.8 0 87.8-6.8 87.8 27.3 0 36.5-38.2 28.3-87.8 28.3zm-.9 72.5H365c10.8 0 18.9 11.7 24 19.2-16.1 1.9-33 2.8-50.6 2.9v-22.1z"/></svg>
+]
+
+--
+.pull-left[
+
+```r
+my_value &lt;- c(1, 3, 9, 27)
+
+my_value
+```
+
+```
+## [1]  1  3  9 27
+```
+]
+
+--
+.pull-right[
+- Variable that stores multiple values are &lt;span style="color: deeppink;"&gt;"Vector"&lt;/span&gt; 
+
+- c ( ) is called &lt;span style="color: deeppink;"&gt;"Combine function"&lt;/span&gt;
+]
+--
+
+.pull-left[
+
+
+```r
+my_value[3]
+```
+
+```
+## [1] 9
+```
+
+```r
+my_value[3] &lt;- "gene"
+
+my_value
+```
+
+```
+## [1] "1"    "3"    "gene" "27"
+```
+
+]
+
+--
+.pull-right[
+
+- Slicing the vector by index
+
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+
+- Altering the vector
+]
+
+---
+
+class: center, middle
+&lt;span style="font-size: 90pt; color: steelblue; "&gt;2.  Packages &lt;/span&gt;
+
+&lt;img src="package.jpg" width="30%" align="center"/&gt;
+
+
+---
+
+#Installing and Loading of Packages
+
+.footnote[
+<svg preserveAspectRatio="none" aria-hidden="true" role="img" viewBox="0 0 581 512" style="height:30px;width:35px;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#E33D85;overflow:visible;position:relative;"><path d="M581 226.6C581 119.1 450.9 32 290.5 32S0 119.1 0 226.6C0 322.4 103.3 402 239.4 418.1V480h99.1v-61.5c24.3-2.7 47.6-7.4 69.4-13.9L448 480h112l-67.4-113.7c54.5-35.4 88.4-84.9 88.4-139.7zm-466.8 14.5c0-73.5 98.9-133 220.8-133s211.9 40.7 211.9 133c0 50.1-26.5 85-70.3 106.4-2.4-1.6-4.7-2.9-6.4-3.7-10.2-5.2-27.8-10.5-27.8-10.5s86.6-6.4 86.6-92.7-90.6-87.9-90.6-87.9h-199V361c-74.1-21.5-125.2-67.1-125.2-119.9zm225.1 38.3v-55.6c57.8 0 87.8-6.8 87.8 27.3 0 36.5-38.2 28.3-87.8 28.3zm-.9 72.5H365c10.8 0 18.9 11.7 24 19.2-16.1 1.9-33 2.8-50.6 2.9v-22.1z"/></svg>
+]
+
+&lt;img src="floppy.jpg" width="30%" align="right"/&gt;
+
+--
+
+- Packages extend the capabilities of &lt;span style="font-size: 15pt; color: deeppink; "&gt; R &lt;/span&gt;
+
+--
+
+- &lt;span style="font-size: 15pt; color: deeppink; "&gt; "Installing" &lt;/span&gt; is downloading the package into your computer.
+
+--
+
+- &lt;span style="font-size: 15pt; color: deeppink; "&gt; "Loading" &lt;/span&gt; is telling R to use it.
+
+&lt;br&gt;
+--
+
+- ...you need to &lt;span style="font-size: 15pt; color: deeppink; "&gt; "install" &lt;/span&gt; a package only once.
+
+
+--
+
+- ...but you have to &lt;span style="font-size: 15pt; color: deeppink; "&gt; "load" &lt;/span&gt; it every time.
+
+&lt;br&gt;
+--
+
+- &lt;span style="font-size: 15pt; color: deeppink; "&gt; "Install" &lt;/span&gt; using `install.packages()`
+
+--
+
+- &lt;span style="font-size: 15pt; color: deeppink; "&gt; "Load" &lt;/span&gt; using `library()`
+
+
+---
+class: center, middle
+background-image: url("thoughts.jpg")
+background-size: cover
+
+#...Time for break
+
+---
+
+#R Packages
+
+.footnote[
+<svg preserveAspectRatio="none" aria-hidden="true" role="img" viewBox="0 0 581 512" style="height:30px;width:35px;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#E33D85;overflow:visible;position:relative;"><path d="M581 226.6C581 119.1 450.9 32 290.5 32S0 119.1 0 226.6C0 322.4 103.3 402 239.4 418.1V480h99.1v-61.5c24.3-2.7 47.6-7.4 69.4-13.9L448 480h112l-67.4-113.7c54.5-35.4 88.4-84.9 88.4-139.7zm-466.8 14.5c0-73.5 98.9-133 220.8-133s211.9 40.7 211.9 133c0 50.1-26.5 85-70.3 106.4-2.4-1.6-4.7-2.9-6.4-3.7-10.2-5.2-27.8-10.5-27.8-10.5s86.6-6.4 86.6-92.7-90.6-87.9-90.6-87.9h-199V361c-74.1-21.5-125.2-67.1-125.2-119.9zm225.1 38.3v-55.6c57.8 0 87.8-6.8 87.8 27.3 0 36.5-38.2 28.3-87.8 28.3zm-.9 72.5H365c10.8 0 18.9 11.7 24 19.2-16.1 1.9-33 2.8-50.6 2.9v-22.1z"/></svg>
+]
+
+--
+
+- "Packages" are collection of functions and data sets
+
+--
+
+- &lt;span style="font-size: 15pt; color: deeppink; "&gt; "dplyr" &lt;/span&gt; is used for data manipulation.
+
+--
+
+- &lt;span style="font-size: 15pt; color: deeppink; "&gt; "ggplot2" &lt;/span&gt; for data visualization.
+
+--
+
+- &lt;span style="font-size: 15pt; color: deeppink; "&gt; "tidyverse" &lt;/span&gt; is a bundle of 8 packages together. &lt;br&gt;
+
+--
+
+&lt;img src="tidyverse_packages.png" width="60%" height="50%" style="display: block; margin: auto;" /&gt;
+---
+
+#R function
+
+.footnote[
+<svg preserveAspectRatio="none" aria-hidden="true" role="img" viewBox="0 0 581 512" style="height:30px;width:35px;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#E33D85;overflow:visible;position:relative;"><path d="M581 226.6C581 119.1 450.9 32 290.5 32S0 119.1 0 226.6C0 322.4 103.3 402 239.4 418.1V480h99.1v-61.5c24.3-2.7 47.6-7.4 69.4-13.9L448 480h112l-67.4-113.7c54.5-35.4 88.4-84.9 88.4-139.7zm-466.8 14.5c0-73.5 98.9-133 220.8-133s211.9 40.7 211.9 133c0 50.1-26.5 85-70.3 106.4-2.4-1.6-4.7-2.9-6.4-3.7-10.2-5.2-27.8-10.5-27.8-10.5s86.6-6.4 86.6-92.7-90.6-87.9-90.6-87.9h-199V361c-74.1-21.5-125.2-67.1-125.2-119.9zm225.1 38.3v-55.6c57.8 0 87.8-6.8 87.8 27.3 0 36.5-38.2 28.3-87.8 28.3zm-.9 72.5H365c10.8 0 18.9 11.7 24 19.2-16.1 1.9-33 2.8-50.6 2.9v-22.1z"/></svg>
+]
+
+--
+
+- &lt;span style="font-size: 15pt; color: deeppink; "&gt; "Functions" &lt;/span&gt; are meant for doing calculation.
+
+--
+.pull-left[
+
+```r
+sqrt(25)
+```
+
+```
+## [1] 5
+```
+
+```r
+log2(8)
+```
+
+```
+## [1] 3
+```
+
+```r
+round(x = 3.141592, digits = 2)
+```
+
+```
+## [1] 3.14
+```
+
+]
+--
+&lt;br&gt;&lt;br&gt;
+.pull-right[
+- `sqrt()`, `log2()` or `round()` are the examples of &lt;span style="font-size: 15pt; color: deeppink; "&gt; functions &lt;/span&gt;&lt;br&gt;&lt;br&gt;
+
+
+- (&lt;span style="font-size: 15pt; color: seagreen; "&gt; "Arguments" &lt;/span&gt;) are kept within the parentheses.&lt;br&gt;&lt;br&gt; 
+- If multiple arguments present, that must be separated by comma.
+]
+---
+
+class: inverse, center, middle
+background-image: url('data.jpg')
+&lt;span style="font-size: 90pt; color: white; "&gt;3.  Data Frames &lt;/span&gt;
+
+
+---
+#Data Frames
+
+.footnote[
+<svg preserveAspectRatio="none" aria-hidden="true" role="img" viewBox="0 0 581 512" style="height:30px;width:35px;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#E33D85;overflow:visible;position:relative;"><path d="M581 226.6C581 119.1 450.9 32 290.5 32S0 119.1 0 226.6C0 322.4 103.3 402 239.4 418.1V480h99.1v-61.5c24.3-2.7 47.6-7.4 69.4-13.9L448 480h112l-67.4-113.7c54.5-35.4 88.4-84.9 88.4-139.7zm-466.8 14.5c0-73.5 98.9-133 220.8-133s211.9 40.7 211.9 133c0 50.1-26.5 85-70.3 106.4-2.4-1.6-4.7-2.9-6.4-3.7-10.2-5.2-27.8-10.5-27.8-10.5s86.6-6.4 86.6-92.7-90.6-87.9-90.6-87.9h-199V361c-74.1-21.5-125.2-67.1-125.2-119.9zm225.1 38.3v-55.6c57.8 0 87.8-6.8 87.8 27.3 0 36.5-38.2 28.3-87.8 28.3zm-.9 72.5H365c10.8 0 18.9 11.7 24 19.2-16.1 1.9-33 2.8-50.6 2.9v-22.1z"/></svg>
+]
+
+&lt;img src="palmer.png" width="30%" align="right"/&gt;
+
+--
+
+.pull-left[
+
+
+`install.packages("palmerpenguins")`
+
+
+
+```r
+library(palmerpenguins)
+
+*df &lt;- penguins
+```
+
+
+&lt;br&gt;&lt;br&gt;
+- `penguins` data set is assigned to the variable named `df`
+
+]
+---
+
+#Data Frames
+
+.footnote[
+<svg preserveAspectRatio="none" aria-hidden="true" role="img" viewBox="0 0 581 512" style="height:30px;width:35px;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#E33D85;overflow:visible;position:relative;"><path d="M581 226.6C581 119.1 450.9 32 290.5 32S0 119.1 0 226.6C0 322.4 103.3 402 239.4 418.1V480h99.1v-61.5c24.3-2.7 47.6-7.4 69.4-13.9L448 480h112l-67.4-113.7c54.5-35.4 88.4-84.9 88.4-139.7zm-466.8 14.5c0-73.5 98.9-133 220.8-133s211.9 40.7 211.9 133c0 50.1-26.5 85-70.3 106.4-2.4-1.6-4.7-2.9-6.4-3.7-10.2-5.2-27.8-10.5-27.8-10.5s86.6-6.4 86.6-92.7-90.6-87.9-90.6-87.9h-199V361c-74.1-21.5-125.2-67.1-125.2-119.9zm225.1 38.3v-55.6c57.8 0 87.8-6.8 87.8 27.3 0 36.5-38.2 28.3-87.8 28.3zm-.9 72.5H365c10.8 0 18.9 11.7 24 19.2-16.1 1.9-33 2.8-50.6 2.9v-22.1z"/></svg>
+]
+
+.pull-left[
+
+
+```r
+head(df, 2)
+```
+
+]
+
+--
+
+.pull-right[
+
+- `head()` function showing first two rows of the data frame `df`
+]
+
+
+---
+
+#Data Frames
+
+.footnote[
+<svg preserveAspectRatio="none" aria-hidden="true" role="img" viewBox="0 0 581 512" style="height:30px;width:35px;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#E33D85;overflow:visible;position:relative;"><path d="M581 226.6C581 119.1 450.9 32 290.5 32S0 119.1 0 226.6C0 322.4 103.3 402 239.4 418.1V480h99.1v-61.5c24.3-2.7 47.6-7.4 69.4-13.9L448 480h112l-67.4-113.7c54.5-35.4 88.4-84.9 88.4-139.7zm-466.8 14.5c0-73.5 98.9-133 220.8-133s211.9 40.7 211.9 133c0 50.1-26.5 85-70.3 106.4-2.4-1.6-4.7-2.9-6.4-3.7-10.2-5.2-27.8-10.5-27.8-10.5s86.6-6.4 86.6-92.7-90.6-87.9-90.6-87.9h-199V361c-74.1-21.5-125.2-67.1-125.2-119.9zm225.1 38.3v-55.6c57.8 0 87.8-6.8 87.8 27.3 0 36.5-38.2 28.3-87.8 28.3zm-.9 72.5H365c10.8 0 18.9 11.7 24 19.2-16.1 1.9-33 2.8-50.6 2.9v-22.1z"/></svg>
+]
+--
+
+
+.pull-left[
+
+
+```r
+df[1, 3]
+```
+
+```
+## # A tibble: 1 x 1
+##   bill_length_mm
+##            &lt;dbl&gt;
+## 1           39.1
+```
+
+]
+
+--
+
+.pull-right[
+
+- Give me the value stored in &lt;span style="font-size: 15pt; color: deeppink; "&gt; first row, third column&lt;/span&gt; of `df`
+]
+
+--
+
+.pull-left[
+
+
+```r
+df[1,]
+```
+
+]
+
+--
+
+.pull-right[
+- Give me the values of &lt;span style="font-size: 15pt; color: deeppink; "&gt; first row&lt;/span&gt; of `df` (all columns)
+]
+---
+
+#Data Frames
+
+.footnote[
+<svg preserveAspectRatio="none" aria-hidden="true" role="img" viewBox="0 0 581 512" style="height:30px;width:35px;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#E33D85;overflow:visible;position:relative;"><path d="M581 226.6C581 119.1 450.9 32 290.5 32S0 119.1 0 226.6C0 322.4 103.3 402 239.4 418.1V480h99.1v-61.5c24.3-2.7 47.6-7.4 69.4-13.9L448 480h112l-67.4-113.7c54.5-35.4 88.4-84.9 88.4-139.7zm-466.8 14.5c0-73.5 98.9-133 220.8-133s211.9 40.7 211.9 133c0 50.1-26.5 85-70.3 106.4-2.4-1.6-4.7-2.9-6.4-3.7-10.2-5.2-27.8-10.5-27.8-10.5s86.6-6.4 86.6-92.7-90.6-87.9-90.6-87.9h-199V361c-74.1-21.5-125.2-67.1-125.2-119.9zm225.1 38.3v-55.6c57.8 0 87.8-6.8 87.8 27.3 0 36.5-38.2 28.3-87.8 28.3zm-.9 72.5H365c10.8 0 18.9 11.7 24 19.2-16.1 1.9-33 2.8-50.6 2.9v-22.1z"/></svg>
+]
+
+--
+
+.pull-left[
+
+```r
+df[,3]
+```
+
+```
+## # A tibble: 344 x 1
+##    bill_length_mm
+##             &lt;dbl&gt;
+##  1           39.1
+##  2           39.5
+##  3           40.3
+##  4           NA  
+##  5           36.7
+##  6           39.3
+##  7           38.9
+##  8           39.2
+##  9           34.1
+## 10           42  
+## # ... with 334 more rows
+```
+]
+--
+
+.pull-right[
+- Give me the values of &lt;span style="font-size: 15pt; color: deeppink; "&gt; third column &lt;/span&gt; of `df` (all rows)
+]
+
+---
+
+#Data Frames
+
+.footnote[
+<svg preserveAspectRatio="none" aria-hidden="true" role="img" viewBox="0 0 581 512" style="height:30px;width:35px;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#E33D85;overflow:visible;position:relative;"><path d="M581 226.6C581 119.1 450.9 32 290.5 32S0 119.1 0 226.6C0 322.4 103.3 402 239.4 418.1V480h99.1v-61.5c24.3-2.7 47.6-7.4 69.4-13.9L448 480h112l-67.4-113.7c54.5-35.4 88.4-84.9 88.4-139.7zm-466.8 14.5c0-73.5 98.9-133 220.8-133s211.9 40.7 211.9 133c0 50.1-26.5 85-70.3 106.4-2.4-1.6-4.7-2.9-6.4-3.7-10.2-5.2-27.8-10.5-27.8-10.5s86.6-6.4 86.6-92.7-90.6-87.9-90.6-87.9h-199V361c-74.1-21.5-125.2-67.1-125.2-119.9zm225.1 38.3v-55.6c57.8 0 87.8-6.8 87.8 27.3 0 36.5-38.2 28.3-87.8 28.3zm-.9 72.5H365c10.8 0 18.9 11.7 24 19.2-16.1 1.9-33 2.8-50.6 2.9v-22.1z"/></svg>
+]
+
+--
+.pull-left[
+
+```r
+df[1:2, 2:4]
+```
+
+```
+## # A tibble: 2 x 3
+##   island    bill_length_mm bill_depth_mm
+##   &lt;fct&gt;              &lt;dbl&gt;         &lt;dbl&gt;
+## 1 Torgersen           39.1          18.7
+## 2 Torgersen           39.5          17.4
+```
+
+]
+
+--
+
+.pull-right[
+
+- Give me the values of &lt;span style="font-size: 15pt; color: deeppink; "&gt; rows 1-2 and columns 2-4 &lt;/span&gt; of `df` (all rows)
+]
+
+---
+
+#Data Frames
+
+.footnote[
+<svg preserveAspectRatio="none" aria-hidden="true" role="img" viewBox="0 0 581 512" style="height:30px;width:35px;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#E33D85;overflow:visible;position:relative;"><path d="M581 226.6C581 119.1 450.9 32 290.5 32S0 119.1 0 226.6C0 322.4 103.3 402 239.4 418.1V480h99.1v-61.5c24.3-2.7 47.6-7.4 69.4-13.9L448 480h112l-67.4-113.7c54.5-35.4 88.4-84.9 88.4-139.7zm-466.8 14.5c0-73.5 98.9-133 220.8-133s211.9 40.7 211.9 133c0 50.1-26.5 85-70.3 106.4-2.4-1.6-4.7-2.9-6.4-3.7-10.2-5.2-27.8-10.5-27.8-10.5s86.6-6.4 86.6-92.7-90.6-87.9-90.6-87.9h-199V361c-74.1-21.5-125.2-67.1-125.2-119.9zm225.1 38.3v-55.6c57.8 0 87.8-6.8 87.8 27.3 0 36.5-38.2 28.3-87.8 28.3zm-.9 72.5H365c10.8 0 18.9 11.7 24 19.2-16.1 1.9-33 2.8-50.6 2.9v-22.1z"/></svg>
+]
+--
+.pull-left[
+
+```r
+df[, "island"]
+```
+
+```
+## # A tibble: 344 x 1
+##    island   
+##    &lt;fct&gt;    
+##  1 Torgersen
+##  2 Torgersen
+##  3 Torgersen
+##  4 Torgersen
+##  5 Torgersen
+##  6 Torgersen
+##  7 Torgersen
+##  8 Torgersen
+##  9 Torgersen
+## 10 Torgersen
+## # ... with 334 more rows
+```
+
+]
+
+--
+
+.pull-right[
+
+- Prints the data stored in "island" column
+
+]
+---
+
+#Pipe &amp;nbsp;&amp;nbsp;&amp;nbsp;%&gt;%
+
+.footnote[
+<svg preserveAspectRatio="none" aria-hidden="true" role="img" viewBox="0 0 581 512" style="height:30px;width:35px;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#E33D85;overflow:visible;position:relative;"><path d="M581 226.6C581 119.1 450.9 32 290.5 32S0 119.1 0 226.6C0 322.4 103.3 402 239.4 418.1V480h99.1v-61.5c24.3-2.7 47.6-7.4 69.4-13.9L448 480h112l-67.4-113.7c54.5-35.4 88.4-84.9 88.4-139.7zm-466.8 14.5c0-73.5 98.9-133 220.8-133s211.9 40.7 211.9 133c0 50.1-26.5 85-70.3 106.4-2.4-1.6-4.7-2.9-6.4-3.7-10.2-5.2-27.8-10.5-27.8-10.5s86.6-6.4 86.6-92.7-90.6-87.9-90.6-87.9h-199V361c-74.1-21.5-125.2-67.1-125.2-119.9zm225.1 38.3v-55.6c57.8 0 87.8-6.8 87.8 27.3 0 36.5-38.2 28.3-87.8 28.3zm-.9 72.5H365c10.8 0 18.9 11.7 24 19.2-16.1 1.9-33 2.8-50.6 2.9v-22.1z"/></svg>
+]
+
+--
+
+.pull-left[
+
+- We &lt;span style="font-size: 15pt; color: deeppink; "&gt; "pipe" &lt;/span&gt; our data through several functions.
+
+- The data set flows through the cascade of operations
+
+&lt;img src="pipe.jpg" width="70%" style="display: block; margin: auto;" /&gt;
+]
+
+--
+
+.pull-right[
+
+
+```r
+library(tidyverse)
+
+df %&gt;%
+  group_by(species) %&gt;%
+  drop_na()%&gt;%
+  summarize(mean(bill_length_mm))
+```
+
+```
+## # A tibble: 3 x 2
+##   species   `mean(bill_length_mm)`
+##   &lt;fct&gt;                      &lt;dbl&gt;
+## 1 Adelie                      38.8
+## 2 Chinstrap                   48.8
+## 3 Gentoo                      47.6
+```
+
+
+]
+
+
+--
+
+&lt;img src="culmen_depth.png" width="35%" style="display: block; margin: auto;" /&gt;
+
+
+---
+
+class: inverse, center, middle
+background-image: url('tidy.jpg')
+&lt;span style="font-size: 90pt; color: white; "&gt;4.  Tidying Data &lt;/span&gt;
+
+
+---
+
+#dplyr verbs
+
+.footnote[
+<svg preserveAspectRatio="none" aria-hidden="true" role="img" viewBox="0 0 581 512" style="height:30px;width:35px;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#E33D85;overflow:visible;position:relative;"><path d="M581 226.6C581 119.1 450.9 32 290.5 32S0 119.1 0 226.6C0 322.4 103.3 402 239.4 418.1V480h99.1v-61.5c24.3-2.7 47.6-7.4 69.4-13.9L448 480h112l-67.4-113.7c54.5-35.4 88.4-84.9 88.4-139.7zm-466.8 14.5c0-73.5 98.9-133 220.8-133s211.9 40.7 211.9 133c0 50.1-26.5 85-70.3 106.4-2.4-1.6-4.7-2.9-6.4-3.7-10.2-5.2-27.8-10.5-27.8-10.5s86.6-6.4 86.6-92.7-90.6-87.9-90.6-87.9h-199V361c-74.1-21.5-125.2-67.1-125.2-119.9zm225.1 38.3v-55.6c57.8 0 87.8-6.8 87.8 27.3 0 36.5-38.2 28.3-87.8 28.3zm-.9 72.5H365c10.8 0 18.9 11.7 24 19.2-16.1 1.9-33 2.8-50.6 2.9v-22.1z"/></svg>
+]
+
+--
+.pull-left[
+- `select()` &lt;span style="color: deeppink; "&gt; &lt;&lt; &lt;/span&gt;
+
+&lt;br&gt;&lt;br&gt;
+&lt;img src="dplyr_logo.png" width="35%" style="display: block; margin: auto;" /&gt;
+]
+
+--
+
+.pull-right[
+
+```r
+iris %&gt;%
+* select(Sepal.Length,
+*        Petal.Width)%&gt;%
+  head()
+```
+
+```
+##   Sepal.Length Petal.Width
+## 1          5.1         0.2
+## 2          4.9         0.2
+## 3          4.7         0.2
+## 4          4.6         0.2
+## 5          5.0         0.2
+## 6          5.4         0.4
+```
+
+]
+
+---
+
+#dplyr verbs
+
+.footnote[
+<svg preserveAspectRatio="none" aria-hidden="true" role="img" viewBox="0 0 581 512" style="height:30px;width:35px;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#E33D85;overflow:visible;position:relative;"><path d="M581 226.6C581 119.1 450.9 32 290.5 32S0 119.1 0 226.6C0 322.4 103.3 402 239.4 418.1V480h99.1v-61.5c24.3-2.7 47.6-7.4 69.4-13.9L448 480h112l-67.4-113.7c54.5-35.4 88.4-84.9 88.4-139.7zm-466.8 14.5c0-73.5 98.9-133 220.8-133s211.9 40.7 211.9 133c0 50.1-26.5 85-70.3 106.4-2.4-1.6-4.7-2.9-6.4-3.7-10.2-5.2-27.8-10.5-27.8-10.5s86.6-6.4 86.6-92.7-90.6-87.9-90.6-87.9h-199V361c-74.1-21.5-125.2-67.1-125.2-119.9zm225.1 38.3v-55.6c57.8 0 87.8-6.8 87.8 27.3 0 36.5-38.2 28.3-87.8 28.3zm-.9 72.5H365c10.8 0 18.9 11.7 24 19.2-16.1 1.9-33 2.8-50.6 2.9v-22.1z"/></svg>
+]
+
+--
+.pull-left[
+- `select()`
+- `filter()` &lt;span style="color: deeppink; "&gt; &lt;&lt; &lt;/span&gt;
+&lt;br&gt;&lt;br&gt;
+&lt;img src="filter.jpg" width="100%" height="100%" style="display: block; margin: auto;" /&gt;
+]
+
+--
+
+.pull-right[
+
+```r
+iris %&gt;%
+  select(Sepal.Length, 
+         Petal.Width)%&gt;%
+* filter(Petal.Width &gt; 2.3)
+```
+
+```
+##   Sepal.Length Petal.Width
+## 1          6.3         2.5
+## 2          7.2         2.5
+## 3          5.8         2.4
+## 4          6.3         2.4
+## 5          6.7         2.4
+## 6          6.7         2.5
+```
+
+]
+
+---
+
+#dplyr verbs
+
+.footnote[
+<svg preserveAspectRatio="none" aria-hidden="true" role="img" viewBox="0 0 581 512" style="height:30px;width:35px;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#E33D85;overflow:visible;position:relative;"><path d="M581 226.6C581 119.1 450.9 32 290.5 32S0 119.1 0 226.6C0 322.4 103.3 402 239.4 418.1V480h99.1v-61.5c24.3-2.7 47.6-7.4 69.4-13.9L448 480h112l-67.4-113.7c54.5-35.4 88.4-84.9 88.4-139.7zm-466.8 14.5c0-73.5 98.9-133 220.8-133s211.9 40.7 211.9 133c0 50.1-26.5 85-70.3 106.4-2.4-1.6-4.7-2.9-6.4-3.7-10.2-5.2-27.8-10.5-27.8-10.5s86.6-6.4 86.6-92.7-90.6-87.9-90.6-87.9h-199V361c-74.1-21.5-125.2-67.1-125.2-119.9zm225.1 38.3v-55.6c57.8 0 87.8-6.8 87.8 27.3 0 36.5-38.2 28.3-87.8 28.3zm-.9 72.5H365c10.8 0 18.9 11.7 24 19.2-16.1 1.9-33 2.8-50.6 2.9v-22.1z"/></svg>
+]
+
+--
+.pull-left[
+- `select()`
+- `filter()`
+- `arrange()` &lt;span style="color: deeppink; "&gt; &lt;&lt; &lt;/span&gt;
+&lt;br&gt;&lt;br&gt;&lt;br&gt;
+- It arranges low to high
+]
+
+--
+
+.pull-right[
+
+```r
+iris %&gt;%
+  select(Sepal.Length, 
+         Petal.Width)%&gt;%
+  filter(Petal.Width &gt; 2.3)%&gt;%
+* arrange(Petal.Width)
+```
+
+```
+##   Sepal.Length Petal.Width
+## 1          5.8         2.4
+## 2          6.3         2.4
+## 3          6.7         2.4
+## 4          6.3         2.5
+## 5          7.2         2.5
+## 6          6.7         2.5
+```
+
+]
+---
+
+
+#dplyr verbs
+
+.footnote[
+<svg preserveAspectRatio="none" aria-hidden="true" role="img" viewBox="0 0 581 512" style="height:30px;width:35px;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#E33D85;overflow:visible;position:relative;"><path d="M581 226.6C581 119.1 450.9 32 290.5 32S0 119.1 0 226.6C0 322.4 103.3 402 239.4 418.1V480h99.1v-61.5c24.3-2.7 47.6-7.4 69.4-13.9L448 480h112l-67.4-113.7c54.5-35.4 88.4-84.9 88.4-139.7zm-466.8 14.5c0-73.5 98.9-133 220.8-133s211.9 40.7 211.9 133c0 50.1-26.5 85-70.3 106.4-2.4-1.6-4.7-2.9-6.4-3.7-10.2-5.2-27.8-10.5-27.8-10.5s86.6-6.4 86.6-92.7-90.6-87.9-90.6-87.9h-199V361c-74.1-21.5-125.2-67.1-125.2-119.9zm225.1 38.3v-55.6c57.8 0 87.8-6.8 87.8 27.3 0 36.5-38.2 28.3-87.8 28.3zm-.9 72.5H365c10.8 0 18.9 11.7 24 19.2-16.1 1.9-33 2.8-50.6 2.9v-22.1z"/></svg>
+]
+
+--
+.pull-left[
+- `select()`
+- `filter()`
+- `arrange(desc())` &lt;span style="color: deeppink; "&gt; &lt;&lt; &lt;/span&gt;
+&lt;br&gt;&lt;br&gt;&lt;br&gt;
+- It arranges high to low
+]
+
+--
+
+.pull-right[
+
+```r
+iris %&gt;%
+  select(Sepal.Length, 
+         Petal.Width)%&gt;%
+  filter(Petal.Width &gt; 2.3)%&gt;%
+* arrange(desc(Petal.Width))
+```
+
+```
+##   Sepal.Length Petal.Width
+## 1          6.3         2.5
+## 2          7.2         2.5
+## 3          6.7         2.5
+## 4          5.8         2.4
+## 5          6.3         2.4
+## 6          6.7         2.4
+```
+
+]
+---
+
+#dplyr verbs
+
+.footnote[
+<svg preserveAspectRatio="none" aria-hidden="true" role="img" viewBox="0 0 581 512" style="height:30px;width:35px;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#E33D85;overflow:visible;position:relative;"><path d="M581 226.6C581 119.1 450.9 32 290.5 32S0 119.1 0 226.6C0 322.4 103.3 402 239.4 418.1V480h99.1v-61.5c24.3-2.7 47.6-7.4 69.4-13.9L448 480h112l-67.4-113.7c54.5-35.4 88.4-84.9 88.4-139.7zm-466.8 14.5c0-73.5 98.9-133 220.8-133s211.9 40.7 211.9 133c0 50.1-26.5 85-70.3 106.4-2.4-1.6-4.7-2.9-6.4-3.7-10.2-5.2-27.8-10.5-27.8-10.5s86.6-6.4 86.6-92.7-90.6-87.9-90.6-87.9h-199V361c-74.1-21.5-125.2-67.1-125.2-119.9zm225.1 38.3v-55.6c57.8 0 87.8-6.8 87.8 27.3 0 36.5-38.2 28.3-87.8 28.3zm-.9 72.5H365c10.8 0 18.9 11.7 24 19.2-16.1 1.9-33 2.8-50.6 2.9v-22.1z"/></svg>
+]
+
+--
+.pull-left[
+- `select()`
+- `filter()`
+- `arrange(desc())` 
+- `rename()` &lt;span style="color: deeppink; "&gt; &lt;&lt; &lt;/span&gt;
+&lt;br&gt;&lt;br&gt;&lt;br&gt;
+- It renames the column name
+]
+
+--
+
+.pull-right[
+
+```r
+iris %&gt;%
+  select(Sepal.Length, Petal.Width)%&gt;%
+  filter(Petal.Width &gt; 2.3)%&gt;%
+  arrange(desc(Petal.Width))%&gt;%
+* rename(petal_width = Petal.Width,
+*        sepal_length = Sepal.Length)
+```
+
+```
+##   sepal_length petal_width
+## 1          6.3         2.5
+## 2          7.2         2.5
+## 3          6.7         2.5
+## 4          5.8         2.4
+## 5          6.3         2.4
+## 6          6.7         2.4
+```
+
+]
+
+---
+
+#dplyr verbs
+
+.footnote[
+<svg preserveAspectRatio="none" aria-hidden="true" role="img" viewBox="0 0 581 512" style="height:30px;width:35px;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#E33D85;overflow:visible;position:relative;"><path d="M581 226.6C581 119.1 450.9 32 290.5 32S0 119.1 0 226.6C0 322.4 103.3 402 239.4 418.1V480h99.1v-61.5c24.3-2.7 47.6-7.4 69.4-13.9L448 480h112l-67.4-113.7c54.5-35.4 88.4-84.9 88.4-139.7zm-466.8 14.5c0-73.5 98.9-133 220.8-133s211.9 40.7 211.9 133c0 50.1-26.5 85-70.3 106.4-2.4-1.6-4.7-2.9-6.4-3.7-10.2-5.2-27.8-10.5-27.8-10.5s86.6-6.4 86.6-92.7-90.6-87.9-90.6-87.9h-199V361c-74.1-21.5-125.2-67.1-125.2-119.9zm225.1 38.3v-55.6c57.8 0 87.8-6.8 87.8 27.3 0 36.5-38.2 28.3-87.8 28.3zm-.9 72.5H365c10.8 0 18.9 11.7 24 19.2-16.1 1.9-33 2.8-50.6 2.9v-22.1z"/></svg>
+]
+
+--
+.pull-left[
+- `select()`
+- `filter()`
+- `arrange(desc())` 
+- `rename()` 
+- `mutate()` &lt;span style="color: deeppink; "&gt; &lt;&lt; &lt;/span&gt;
+&lt;br&gt;&lt;br&gt;&lt;br&gt;
+- It creates one or more column
+]
+
+--
+
+.pull-right[
+
+```r
+iris %&gt;%
+  select(Petal.Length, Petal.Width)%&gt;%
+  filter(Petal.Width &gt; 2.3)%&gt;%
+  arrange(desc(Petal.Width))%&gt;%
+  rename(petal_width = Petal.Width,  
+         petal_length = Petal.Length)%&gt;%
+* mutate(petal = petal_width + petal_length)
+```
+
+```
+##   petal_length petal_width petal
+## 1          6.0         2.5   8.5
+## 2          6.1         2.5   8.6
+## 3          5.7         2.5   8.2
+## 4          5.1         2.4   7.5
+## 5          5.6         2.4   8.0
+## 6          5.6         2.4   8.0
+```
+
+]
+
+---
+
+#dplyr verbs
+
+.footnote[
+<svg preserveAspectRatio="none" aria-hidden="true" role="img" viewBox="0 0 581 512" style="height:30px;width:35px;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#E33D85;overflow:visible;position:relative;"><path d="M581 226.6C581 119.1 450.9 32 290.5 32S0 119.1 0 226.6C0 322.4 103.3 402 239.4 418.1V480h99.1v-61.5c24.3-2.7 47.6-7.4 69.4-13.9L448 480h112l-67.4-113.7c54.5-35.4 88.4-84.9 88.4-139.7zm-466.8 14.5c0-73.5 98.9-133 220.8-133s211.9 40.7 211.9 133c0 50.1-26.5 85-70.3 106.4-2.4-1.6-4.7-2.9-6.4-3.7-10.2-5.2-27.8-10.5-27.8-10.5s86.6-6.4 86.6-92.7-90.6-87.9-90.6-87.9h-199V361c-74.1-21.5-125.2-67.1-125.2-119.9zm225.1 38.3v-55.6c57.8 0 87.8-6.8 87.8 27.3 0 36.5-38.2 28.3-87.8 28.3zm-.9 72.5H365c10.8 0 18.9 11.7 24 19.2-16.1 1.9-33 2.8-50.6 2.9v-22.1z"/></svg>
+]
+
+--
+.pull-left[
+- `select()`
+- `filter()`
+- `arrange(desc())`
+]
+--
+.pull-right[
+- `rename()` 
+- `mutate()`
+- `summarise()`&lt;span style="color: deeppink; "&gt; &lt;&lt; &lt;/span&gt;
+
+]
+--
+
+
+```r
+penguins %&gt;%
+  group_by(species) %&gt;%
+  drop_na()%&gt;%
+  select(bill_length_mm, body_mass_g, flipper_length_mm)%&gt;%
+* summarize(across(everything(), mean))
+```
+
+```
+## # A tibble: 3 x 4
+##   species   bill_length_mm body_mass_g flipper_length_mm
+##   &lt;fct&gt;              &lt;dbl&gt;       &lt;dbl&gt;             &lt;dbl&gt;
+## 1 Adelie              38.8       3706.              190.
+## 2 Chinstrap           48.8       3733.              196.
+## 3 Gentoo              47.6       5092.              217.
+```
+
+
+---
+
+#dplyr verbs
+
+.footnote[
+<svg preserveAspectRatio="none" aria-hidden="true" role="img" viewBox="0 0 581 512" style="height:30px;width:35px;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#E33D85;overflow:visible;position:relative;"><path d="M581 226.6C581 119.1 450.9 32 290.5 32S0 119.1 0 226.6C0 322.4 103.3 402 239.4 418.1V480h99.1v-61.5c24.3-2.7 47.6-7.4 69.4-13.9L448 480h112l-67.4-113.7c54.5-35.4 88.4-84.9 88.4-139.7zm-466.8 14.5c0-73.5 98.9-133 220.8-133s211.9 40.7 211.9 133c0 50.1-26.5 85-70.3 106.4-2.4-1.6-4.7-2.9-6.4-3.7-10.2-5.2-27.8-10.5-27.8-10.5s86.6-6.4 86.6-92.7-90.6-87.9-90.6-87.9h-199V361c-74.1-21.5-125.2-67.1-125.2-119.9zm225.1 38.3v-55.6c57.8 0 87.8-6.8 87.8 27.3 0 36.5-38.2 28.3-87.8 28.3zm-.9 72.5H365c10.8 0 18.9 11.7 24 19.2-16.1 1.9-33 2.8-50.6 2.9v-22.1z"/></svg>
+]
+
+--
+.pull-left[
+- `select()`
+- `filter()`
+- `arrange(desc())`
+]
+
+.pull-right[
+- `rename()` 
+- `mutate()`
+- `summarise()`
+- `join()`&lt;span style="color: deeppink; "&gt; &lt;&lt; &lt;/span&gt;
+
+]
+
+--
+.pull-left[
+
+```r
+df1 &lt;- data.frame(
+  Gene = c("gene1",
+           "gene2",
+           "gene3"),
+  Sample1 = c(5, 6, 13))
+df1
+```
+
+```
+##    Gene Sample1
+## 1 gene1       5
+## 2 gene2       6
+## 3 gene3      13
+```
+]
+
+--
+.pull-right[
+
+```r
+df2 &lt;- data.frame(
+  Gene = c("gene1",
+           "gene2",
+           "gene3"),
+  Sample2 = c(15, 38, 3))
+df2
+```
+
+```
+##    Gene Sample2
+## 1 gene1      15
+## 2 gene2      38
+## 3 gene3       3
+```
+]
+
+
+---
+#dplyr verbs
+
+.footnote[
+<svg preserveAspectRatio="none" aria-hidden="true" role="img" viewBox="0 0 581 512" style="height:30px;width:35px;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#E33D85;overflow:visible;position:relative;"><path d="M581 226.6C581 119.1 450.9 32 290.5 32S0 119.1 0 226.6C0 322.4 103.3 402 239.4 418.1V480h99.1v-61.5c24.3-2.7 47.6-7.4 69.4-13.9L448 480h112l-67.4-113.7c54.5-35.4 88.4-84.9 88.4-139.7zm-466.8 14.5c0-73.5 98.9-133 220.8-133s211.9 40.7 211.9 133c0 50.1-26.5 85-70.3 106.4-2.4-1.6-4.7-2.9-6.4-3.7-10.2-5.2-27.8-10.5-27.8-10.5s86.6-6.4 86.6-92.7-90.6-87.9-90.6-87.9h-199V361c-74.1-21.5-125.2-67.1-125.2-119.9zm225.1 38.3v-55.6c57.8 0 87.8-6.8 87.8 27.3 0 36.5-38.2 28.3-87.8 28.3zm-.9 72.5H365c10.8 0 18.9 11.7 24 19.2-16.1 1.9-33 2.8-50.6 2.9v-22.1z"/></svg>
+]
+
+--
+.pull-left[
+- `select()`
+- `filter()`
+- `arrange(desc())`
+]
+
+.pull-right[
+- `rename()` 
+- `mutate()`
+- `summarise()`
+- `join()`&lt;span style="color: deeppink; "&gt; &lt;&lt; &lt;/span&gt;
+
+]
+
+
+```r
+full_join(df1, df2, by = "Gene")
+```
+
+```
+##    Gene Sample1 Sample2
+## 1 gene1       5      15
+## 2 gene2       6      38
+## 3 gene3      13       3
+```
+
+
+---
+
+#Changing rownames to column with dplyr
+
+.footnote[
+<svg preserveAspectRatio="none" aria-hidden="true" role="img" viewBox="0 0 581 512" style="height:30px;width:35px;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#E33D85;overflow:visible;position:relative;"><path d="M581 226.6C581 119.1 450.9 32 290.5 32S0 119.1 0 226.6C0 322.4 103.3 402 239.4 418.1V480h99.1v-61.5c24.3-2.7 47.6-7.4 69.4-13.9L448 480h112l-67.4-113.7c54.5-35.4 88.4-84.9 88.4-139.7zm-466.8 14.5c0-73.5 98.9-133 220.8-133s211.9 40.7 211.9 133c0 50.1-26.5 85-70.3 106.4-2.4-1.6-4.7-2.9-6.4-3.7-10.2-5.2-27.8-10.5-27.8-10.5s86.6-6.4 86.6-92.7-90.6-87.9-90.6-87.9h-199V361c-74.1-21.5-125.2-67.1-125.2-119.9zm225.1 38.3v-55.6c57.8 0 87.8-6.8 87.8 27.3 0 36.5-38.2 28.3-87.8 28.3zm-.9 72.5H365c10.8 0 18.9 11.7 24 19.2-16.1 1.9-33 2.8-50.6 2.9v-22.1z"/></svg>
+]
+
+--
+
+
+```r
+data &lt;- datasets::USArrests
+head(data, 2)
+```
+
+```
+##         Murder Assault UrbanPop Rape
+## Alabama   13.2     236       58 21.2
+## Alaska    10.0     263       48 44.5
+```
+
+```r
+data &lt;- USArrests %&gt;%
+  rownames_to_column(var = "State")
+head(data, 2)
+```
+
+```
+##     State Murder Assault UrbanPop Rape
+## 1 Alabama   13.2     236       58 21.2
+## 2  Alaska   10.0     263       48 44.5
+```
+
+
+
+---
+
+#Reshaping data with tidyr
+
+.footnote[
+<svg preserveAspectRatio="none" aria-hidden="true" role="img" viewBox="0 0 581 512" style="height:30px;width:35px;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#E33D85;overflow:visible;position:relative;"><path d="M581 226.6C581 119.1 450.9 32 290.5 32S0 119.1 0 226.6C0 322.4 103.3 402 239.4 418.1V480h99.1v-61.5c24.3-2.7 47.6-7.4 69.4-13.9L448 480h112l-67.4-113.7c54.5-35.4 88.4-84.9 88.4-139.7zm-466.8 14.5c0-73.5 98.9-133 220.8-133s211.9 40.7 211.9 133c0 50.1-26.5 85-70.3 106.4-2.4-1.6-4.7-2.9-6.4-3.7-10.2-5.2-27.8-10.5-27.8-10.5s86.6-6.4 86.6-92.7-90.6-87.9-90.6-87.9h-199V361c-74.1-21.5-125.2-67.1-125.2-119.9zm225.1 38.3v-55.6c57.8 0 87.8-6.8 87.8 27.3 0 36.5-38.2 28.3-87.8 28.3zm-.9 72.5H365c10.8 0 18.9 11.7 24 19.2-16.1 1.9-33 2.8-50.6 2.9v-22.1z"/></svg>
+]
+
+--
+.pull-left[
+
+- `gather()` &lt;span style="color: deeppink; "&gt; &lt;&lt; &lt;/span&gt;
+&lt;br&gt;&lt;br&gt;
+&lt;img src="tidyr.png" width="35%" style="display: block; margin: auto;" /&gt;
+]
+
+--
+.pull-right[
+
+```r
+*tidy_data &lt;- gather(
+  data = data,
+  key = "Crime",
+  value = "Estimate",
+  - State)
+head(tidy_data)
+```
+
+```
+##        State  Crime Estimate
+## 1    Alabama Murder     13.2
+## 2     Alaska Murder     10.0
+## 3    Arizona Murder      8.1
+## 4   Arkansas Murder      8.8
+## 5 California Murder      9.0
+## 6   Colorado Murder      7.9
+```
+]
+---
+#Reshaping data with tidyr
+
+.footnote[
+<svg preserveAspectRatio="none" aria-hidden="true" role="img" viewBox="0 0 581 512" style="height:30px;width:35px;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#E33D85;overflow:visible;position:relative;"><path d="M581 226.6C581 119.1 450.9 32 290.5 32S0 119.1 0 226.6C0 322.4 103.3 402 239.4 418.1V480h99.1v-61.5c24.3-2.7 47.6-7.4 69.4-13.9L448 480h112l-67.4-113.7c54.5-35.4 88.4-84.9 88.4-139.7zm-466.8 14.5c0-73.5 98.9-133 220.8-133s211.9 40.7 211.9 133c0 50.1-26.5 85-70.3 106.4-2.4-1.6-4.7-2.9-6.4-3.7-10.2-5.2-27.8-10.5-27.8-10.5s86.6-6.4 86.6-92.7-90.6-87.9-90.6-87.9h-199V361c-74.1-21.5-125.2-67.1-125.2-119.9zm225.1 38.3v-55.6c57.8 0 87.8-6.8 87.8 27.3 0 36.5-38.2 28.3-87.8 28.3zm-.9 72.5H365c10.8 0 18.9 11.7 24 19.2-16.1 1.9-33 2.8-50.6 2.9v-22.1z"/></svg>
+]
+
+--
+.pull-left[
+
+- `gather()`
+- `spread()` &lt;span style="color: deeppink; "&gt; &lt;&lt; &lt;/span&gt;
+&lt;br&gt;&lt;br&gt;
+&lt;img src="tidyr.png" width="35%" style="display: block; margin: auto;" /&gt;
+]
+
+--
+.pull-right[
+
+```r
+*orig_data &lt;- spread(
+  data = tidy_data,
+  key = "Crime",
+  value = "Estimate")
+
+head(orig_data[,1:3])
+```
+
+```
+##        State Assault Murder
+## 1    Alabama     236   13.2
+## 2     Alaska     263   10.0
+## 3    Arizona     294    8.1
+## 4   Arkansas     190    8.8
+## 5 California     276    9.0
+## 6   Colorado     204    7.9
+```
+]
+---
+
+#Data Import and Export using readr
+
+.footnote[
+<svg preserveAspectRatio="none" aria-hidden="true" role="img" viewBox="0 0 581 512" style="height:30px;width:35px;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#E33D85;overflow:visible;position:relative;"><path d="M581 226.6C581 119.1 450.9 32 290.5 32S0 119.1 0 226.6C0 322.4 103.3 402 239.4 418.1V480h99.1v-61.5c24.3-2.7 47.6-7.4 69.4-13.9L448 480h112l-67.4-113.7c54.5-35.4 88.4-84.9 88.4-139.7zm-466.8 14.5c0-73.5 98.9-133 220.8-133s211.9 40.7 211.9 133c0 50.1-26.5 85-70.3 106.4-2.4-1.6-4.7-2.9-6.4-3.7-10.2-5.2-27.8-10.5-27.8-10.5s86.6-6.4 86.6-92.7-90.6-87.9-90.6-87.9h-199V361c-74.1-21.5-125.2-67.1-125.2-119.9zm225.1 38.3v-55.6c57.8 0 87.8-6.8 87.8 27.3 0 36.5-38.2 28.3-87.8 28.3zm-.9 72.5H365c10.8 0 18.9 11.7 24 19.2-16.1 1.9-33 2.8-50.6 2.9v-22.1z"/></svg>
+]
+
+--
+
+.pull-left[
+&lt;img src="readr.png" width="35%" style="display: block; margin: auto;" /&gt;
+]
+
+--
+.pull-right[
+
+```r
+library(readr)
+
+*file &lt;- read_csv(
+  "filename.csv")
+
+*write_csv(x = data,
+          file = "filename.csv")
+```
+
+]
+
+--
+
+.pull-left[
+&lt;img src="readxl.png" width="35%" style="display: block; margin: auto;" /&gt;
+]
+
+--
+
+.pull-right[
+
+```r
+library(readxl)
+
+*file &lt;- read_xlsx(
+  "filename.xlsx")
+```
+
+]
+
+
+---
+
+class: center, middle
+background-image: url("break.jpg")
+background-size: cover
+
+---
+
+class: inverse, center, middle
+background-image: url('viz1.jpg')
+&lt;span style="font-size: 90pt; color: white; "&gt;5.  Data Visualization &lt;/span&gt;
+
+---
+
+#Data Visualization with {ggplot2}
+
+.footnote[
+<svg preserveAspectRatio="none" aria-hidden="true" role="img" viewBox="0 0 581 512" style="height:30px;width:35px;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#E33D85;overflow:visible;position:relative;"><path d="M581 226.6C581 119.1 450.9 32 290.5 32S0 119.1 0 226.6C0 322.4 103.3 402 239.4 418.1V480h99.1v-61.5c24.3-2.7 47.6-7.4 69.4-13.9L448 480h112l-67.4-113.7c54.5-35.4 88.4-84.9 88.4-139.7zm-466.8 14.5c0-73.5 98.9-133 220.8-133s211.9 40.7 211.9 133c0 50.1-26.5 85-70.3 106.4-2.4-1.6-4.7-2.9-6.4-3.7-10.2-5.2-27.8-10.5-27.8-10.5s86.6-6.4 86.6-92.7-90.6-87.9-90.6-87.9h-199V361c-74.1-21.5-125.2-67.1-125.2-119.9zm225.1 38.3v-55.6c57.8 0 87.8-6.8 87.8 27.3 0 36.5-38.2 28.3-87.8 28.3zm-.9 72.5H365c10.8 0 18.9 11.7 24 19.2-16.1 1.9-33 2.8-50.6 2.9v-22.1z"/></svg>
+]
+
+.pull-left[
+&lt;img src="ggplot.png" width="35%" style="display: block; margin: auto;" /&gt;
+]
+
+--
+
+.pull-right[
+&lt;img src="layers.png" width="100%" height="100%" style="display: block; margin: auto;" /&gt;
+
+- Graphics has distinct layers
+]
+
+--
+&lt;br&gt;&lt;br&gt;
+- Resources:: [Introduction to ggplot2](https://englelab.gatech.edu/useRguide/introduction-to-ggplot2.html)
+---
+#Data Visualization with {ggplot2}
+
+.footnote[
+<svg preserveAspectRatio="none" aria-hidden="true" role="img" viewBox="0 0 581 512" style="height:30px;width:35px;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#E33D85;overflow:visible;position:relative;"><path d="M581 226.6C581 119.1 450.9 32 290.5 32S0 119.1 0 226.6C0 322.4 103.3 402 239.4 418.1V480h99.1v-61.5c24.3-2.7 47.6-7.4 69.4-13.9L448 480h112l-67.4-113.7c54.5-35.4 88.4-84.9 88.4-139.7zm-466.8 14.5c0-73.5 98.9-133 220.8-133s211.9 40.7 211.9 133c0 50.1-26.5 85-70.3 106.4-2.4-1.6-4.7-2.9-6.4-3.7-10.2-5.2-27.8-10.5-27.8-10.5s86.6-6.4 86.6-92.7-90.6-87.9-90.6-87.9h-199V361c-74.1-21.5-125.2-67.1-125.2-119.9zm225.1 38.3v-55.6c57.8 0 87.8-6.8 87.8 27.3 0 36.5-38.2 28.3-87.8 28.3zm-.9 72.5H365c10.8 0 18.9 11.7 24 19.2-16.1 1.9-33 2.8-50.6 2.9v-22.1z"/></svg>
+]
+
+.pull-left[
+&lt;img src="ge_data.png" width="100%" height="100%" style="display: block; margin: auto;" /&gt;
+
+- Data layer
+]
+
+--
+
+.pull-right[
+
+```r
+library(ggplot2)
+
+ggplot(data = penguins)
+```
+
+![](intro2R_files/figure-html/unnamed-chunk-75-1.png)&lt;!-- --&gt;
+
+]
+
+---
+#Data Visualization with {ggplot2}
+
+.footnote[
+<svg preserveAspectRatio="none" aria-hidden="true" role="img" viewBox="0 0 581 512" style="height:30px;width:35px;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#E33D85;overflow:visible;position:relative;"><path d="M581 226.6C581 119.1 450.9 32 290.5 32S0 119.1 0 226.6C0 322.4 103.3 402 239.4 418.1V480h99.1v-61.5c24.3-2.7 47.6-7.4 69.4-13.9L448 480h112l-67.4-113.7c54.5-35.4 88.4-84.9 88.4-139.7zm-466.8 14.5c0-73.5 98.9-133 220.8-133s211.9 40.7 211.9 133c0 50.1-26.5 85-70.3 106.4-2.4-1.6-4.7-2.9-6.4-3.7-10.2-5.2-27.8-10.5-27.8-10.5s86.6-6.4 86.6-92.7-90.6-87.9-90.6-87.9h-199V361c-74.1-21.5-125.2-67.1-125.2-119.9zm225.1 38.3v-55.6c57.8 0 87.8-6.8 87.8 27.3 0 36.5-38.2 28.3-87.8 28.3zm-.9 72.5H365c10.8 0 18.9 11.7 24 19.2-16.1 1.9-33 2.8-50.6 2.9v-22.1z"/></svg>
+]
+
+.pull-left[
+&lt;img src="ge_aes.png" width="100%" height="100%" style="display: block; margin: auto;" /&gt;
+
+- Aesthetic Layer
+
+- X and Y coordinates are defined
+]
+
+--
+
+.pull-right[
+
+```r
+library(ggplot2)
+
+g &lt;- ggplot(data = penguins,
+       aes(
+         x = flipper_length_mm,
+         y = body_mass_g))
+g
+```
+
+![](intro2R_files/figure-html/unnamed-chunk-78-1.png)&lt;!-- --&gt;
+
+]
+---
+
+#Data Visualization with {ggplot2}
+
+.footnote[
+<svg preserveAspectRatio="none" aria-hidden="true" role="img" viewBox="0 0 581 512" style="height:30px;width:35px;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#E33D85;overflow:visible;position:relative;"><path d="M581 226.6C581 119.1 450.9 32 290.5 32S0 119.1 0 226.6C0 322.4 103.3 402 239.4 418.1V480h99.1v-61.5c24.3-2.7 47.6-7.4 69.4-13.9L448 480h112l-67.4-113.7c54.5-35.4 88.4-84.9 88.4-139.7zm-466.8 14.5c0-73.5 98.9-133 220.8-133s211.9 40.7 211.9 133c0 50.1-26.5 85-70.3 106.4-2.4-1.6-4.7-2.9-6.4-3.7-10.2-5.2-27.8-10.5-27.8-10.5s86.6-6.4 86.6-92.7-90.6-87.9-90.6-87.9h-199V361c-74.1-21.5-125.2-67.1-125.2-119.9zm225.1 38.3v-55.6c57.8 0 87.8-6.8 87.8 27.3 0 36.5-38.2 28.3-87.8 28.3zm-.9 72.5H365c10.8 0 18.9 11.7 24 19.2-16.1 1.9-33 2.8-50.6 2.9v-22.1z"/></svg>
+]
+
+.pull-left[
+&lt;img src="ge_geom.png" width="100%" height="100%" style="display: block; margin: auto;" /&gt;
+
+- Geometries Layer
+]
+
+--
+
+.pull-right[
+
+```r
+*g + geom_point()
+```
+
+![](intro2R_files/figure-html/unnamed-chunk-81-1.png)&lt;!-- --&gt;
+
+]
+---
+
+#Data Visualization with {ggplot2}
+
+.footnote[
+<svg preserveAspectRatio="none" aria-hidden="true" role="img" viewBox="0 0 581 512" style="height:30px;width:35px;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#E33D85;overflow:visible;position:relative;"><path d="M581 226.6C581 119.1 450.9 32 290.5 32S0 119.1 0 226.6C0 322.4 103.3 402 239.4 418.1V480h99.1v-61.5c24.3-2.7 47.6-7.4 69.4-13.9L448 480h112l-67.4-113.7c54.5-35.4 88.4-84.9 88.4-139.7zm-466.8 14.5c0-73.5 98.9-133 220.8-133s211.9 40.7 211.9 133c0 50.1-26.5 85-70.3 106.4-2.4-1.6-4.7-2.9-6.4-3.7-10.2-5.2-27.8-10.5-27.8-10.5s86.6-6.4 86.6-92.7-90.6-87.9-90.6-87.9h-199V361c-74.1-21.5-125.2-67.1-125.2-119.9zm225.1 38.3v-55.6c57.8 0 87.8-6.8 87.8 27.3 0 36.5-38.2 28.3-87.8 28.3zm-.9 72.5H365c10.8 0 18.9 11.7 24 19.2-16.1 1.9-33 2.8-50.6 2.9v-22.1z"/></svg>
+]
+
+.pull-left[
+&lt;img src="ge_facet.png" width="100%" height="100%" style="display: block; margin: auto;" /&gt;
+
+- Facet wrapping creates subplots
+]
+
+--
+
+.pull-right[
+
+```r
+g + geom_point()+
+* facet_wrap(~ species)
+```
+
+![](intro2R_files/figure-html/unnamed-chunk-84-1.png)&lt;!-- --&gt;
+
+]
+---
+
+#Data Visualization with {ggplot2}
+
+.footnote[
+<svg preserveAspectRatio="none" aria-hidden="true" role="img" viewBox="0 0 581 512" style="height:30px;width:35px;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#E33D85;overflow:visible;position:relative;"><path d="M581 226.6C581 119.1 450.9 32 290.5 32S0 119.1 0 226.6C0 322.4 103.3 402 239.4 418.1V480h99.1v-61.5c24.3-2.7 47.6-7.4 69.4-13.9L448 480h112l-67.4-113.7c54.5-35.4 88.4-84.9 88.4-139.7zm-466.8 14.5c0-73.5 98.9-133 220.8-133s211.9 40.7 211.9 133c0 50.1-26.5 85-70.3 106.4-2.4-1.6-4.7-2.9-6.4-3.7-10.2-5.2-27.8-10.5-27.8-10.5s86.6-6.4 86.6-92.7-90.6-87.9-90.6-87.9h-199V361c-74.1-21.5-125.2-67.1-125.2-119.9zm225.1 38.3v-55.6c57.8 0 87.8-6.8 87.8 27.3 0 36.5-38.2 28.3-87.8 28.3zm-.9 72.5H365c10.8 0 18.9 11.7 24 19.2-16.1 1.9-33 2.8-50.6 2.9v-22.1z"/></svg>
+]
+
+
+
+--
+
+
+
+```r
+*g + geom_point(aes(color = sex))+
+  facet_wrap(~ species)
+```
+
+![](intro2R_files/figure-html/unnamed-chunk-86-1.png)&lt;!-- --&gt;
+
+---
+
+#Themes
+
+.footnote[
+<svg preserveAspectRatio="none" aria-hidden="true" role="img" viewBox="0 0 581 512" style="height:30px;width:35px;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#E33D85;overflow:visible;position:relative;"><path d="M581 226.6C581 119.1 450.9 32 290.5 32S0 119.1 0 226.6C0 322.4 103.3 402 239.4 418.1V480h99.1v-61.5c24.3-2.7 47.6-7.4 69.4-13.9L448 480h112l-67.4-113.7c54.5-35.4 88.4-84.9 88.4-139.7zm-466.8 14.5c0-73.5 98.9-133 220.8-133s211.9 40.7 211.9 133c0 50.1-26.5 85-70.3 106.4-2.4-1.6-4.7-2.9-6.4-3.7-10.2-5.2-27.8-10.5-27.8-10.5s86.6-6.4 86.6-92.7-90.6-87.9-90.6-87.9h-199V361c-74.1-21.5-125.2-67.1-125.2-119.9zm225.1 38.3v-55.6c57.8 0 87.8-6.8 87.8 27.3 0 36.5-38.2 28.3-87.8 28.3zm-.9 72.5H365c10.8 0 18.9 11.7 24 19.2-16.1 1.9-33 2.8-50.6 2.9v-22.1z"/></svg>
+]
+
+![](intro2R_files/figure-html/unnamed-chunk-88-1.png)&lt;!-- --&gt;
+
+---
+
+#Data Visualization with {ggplot2}
+
+.footnote[
+<svg preserveAspectRatio="none" aria-hidden="true" role="img" viewBox="0 0 581 512" style="height:30px;width:35px;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#E33D85;overflow:visible;position:relative;"><path d="M581 226.6C581 119.1 450.9 32 290.5 32S0 119.1 0 226.6C0 322.4 103.3 402 239.4 418.1V480h99.1v-61.5c24.3-2.7 47.6-7.4 69.4-13.9L448 480h112l-67.4-113.7c54.5-35.4 88.4-84.9 88.4-139.7zm-466.8 14.5c0-73.5 98.9-133 220.8-133s211.9 40.7 211.9 133c0 50.1-26.5 85-70.3 106.4-2.4-1.6-4.7-2.9-6.4-3.7-10.2-5.2-27.8-10.5-27.8-10.5s86.6-6.4 86.6-92.7-90.6-87.9-90.6-87.9h-199V361c-74.1-21.5-125.2-67.1-125.2-119.9zm225.1 38.3v-55.6c57.8 0 87.8-6.8 87.8 27.3 0 36.5-38.2 28.3-87.8 28.3zm-.9 72.5H365c10.8 0 18.9 11.7 24 19.2-16.1 1.9-33 2.8-50.6 2.9v-22.1z"/></svg>
+]
+
+
+
+--
+
+
+
+```r
+g + geom_point(aes(color = sex))+
+* facet_wrap(~ species)+ theme_minimal()
+```
+
+![](intro2R_files/figure-html/unnamed-chunk-90-1.png)&lt;!-- --&gt;
+
+---
+
+#Data Visualization with {ggplot2}
+
+.footnote[
+<svg preserveAspectRatio="none" aria-hidden="true" role="img" viewBox="0 0 581 512" style="height:30px;width:35px;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#E33D85;overflow:visible;position:relative;"><path d="M581 226.6C581 119.1 450.9 32 290.5 32S0 119.1 0 226.6C0 322.4 103.3 402 239.4 418.1V480h99.1v-61.5c24.3-2.7 47.6-7.4 69.4-13.9L448 480h112l-67.4-113.7c54.5-35.4 88.4-84.9 88.4-139.7zm-466.8 14.5c0-73.5 98.9-133 220.8-133s211.9 40.7 211.9 133c0 50.1-26.5 85-70.3 106.4-2.4-1.6-4.7-2.9-6.4-3.7-10.2-5.2-27.8-10.5-27.8-10.5s86.6-6.4 86.6-92.7-90.6-87.9-90.6-87.9h-199V361c-74.1-21.5-125.2-67.1-125.2-119.9zm225.1 38.3v-55.6c57.8 0 87.8-6.8 87.8 27.3 0 36.5-38.2 28.3-87.8 28.3zm-.9 72.5H365c10.8 0 18.9 11.7 24 19.2-16.1 1.9-33 2.8-50.6 2.9v-22.1z"/></svg>
+]
+
+
+
+--
+
+
+
+```r
+*ggplot(data = penguins %&gt;% drop_na(),
+       aes(x = flipper_length_mm,
+           y = body_mass_g)) + geom_point(aes(color = sex))+
+  facet_wrap(~ species)+ theme_minimal()
+```
+
+![](intro2R_files/figure-html/unnamed-chunk-92-1.png)&lt;!-- --&gt;
+
+---
+
+#Data Visualization with {ggplot2}
+
+.footnote[
+<svg preserveAspectRatio="none" aria-hidden="true" role="img" viewBox="0 0 581 512" style="height:30px;width:35px;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#E33D85;overflow:visible;position:relative;"><path d="M581 226.6C581 119.1 450.9 32 290.5 32S0 119.1 0 226.6C0 322.4 103.3 402 239.4 418.1V480h99.1v-61.5c24.3-2.7 47.6-7.4 69.4-13.9L448 480h112l-67.4-113.7c54.5-35.4 88.4-84.9 88.4-139.7zm-466.8 14.5c0-73.5 98.9-133 220.8-133s211.9 40.7 211.9 133c0 50.1-26.5 85-70.3 106.4-2.4-1.6-4.7-2.9-6.4-3.7-10.2-5.2-27.8-10.5-27.8-10.5s86.6-6.4 86.6-92.7-90.6-87.9-90.6-87.9h-199V361c-74.1-21.5-125.2-67.1-125.2-119.9zm225.1 38.3v-55.6c57.8 0 87.8-6.8 87.8 27.3 0 36.5-38.2 28.3-87.8 28.3zm-.9 72.5H365c10.8 0 18.9 11.7 24 19.2-16.1 1.9-33 2.8-50.6 2.9v-22.1z"/></svg>
+]
+
+
+
+--
+
+
+
+```r
+ggplot(data = penguins %&gt;% drop_na(), 
+       aes(x = flipper_length_mm,
+           y = body_mass_g)) + geom_point(aes(color = sex))+
+  facet_wrap(~ species)+ theme_minimal()+
+* labs(title = "Penguin flipper and body mass",
+       x = "Flipper length (mm)",#renaming x axis
+       y = "Body mass (g)",#renaming y axis
+       color = "Penguin sex") #renaming legend title
+```
+
+![](intro2R_files/figure-html/unnamed-chunk-94-1.png)&lt;!-- --&gt;
+
+---
+
+#Data Visualization with {ggplot2}
+
+.footnote[
+<svg preserveAspectRatio="none" aria-hidden="true" role="img" viewBox="0 0 581 512" style="height:30px;width:35px;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#E33D85;overflow:visible;position:relative;"><path d="M581 226.6C581 119.1 450.9 32 290.5 32S0 119.1 0 226.6C0 322.4 103.3 402 239.4 418.1V480h99.1v-61.5c24.3-2.7 47.6-7.4 69.4-13.9L448 480h112l-67.4-113.7c54.5-35.4 88.4-84.9 88.4-139.7zm-466.8 14.5c0-73.5 98.9-133 220.8-133s211.9 40.7 211.9 133c0 50.1-26.5 85-70.3 106.4-2.4-1.6-4.7-2.9-6.4-3.7-10.2-5.2-27.8-10.5-27.8-10.5s86.6-6.4 86.6-92.7-90.6-87.9-90.6-87.9h-199V361c-74.1-21.5-125.2-67.1-125.2-119.9zm225.1 38.3v-55.6c57.8 0 87.8-6.8 87.8 27.3 0 36.5-38.2 28.3-87.8 28.3zm-.9 72.5H365c10.8 0 18.9 11.7 24 19.2-16.1 1.9-33 2.8-50.6 2.9v-22.1z"/></svg>
+]
+
+
+
+--
+
+
+```r
+p + scale_color_manual(values = c("darkorange","cyan4"))
+```
+
+![](intro2R_files/figure-html/unnamed-chunk-97-1.png)&lt;!-- --&gt;
+
+
+---
+
+#Data Visualization with {ggplot2}
+
+.footnote[
+<svg preserveAspectRatio="none" aria-hidden="true" role="img" viewBox="0 0 581 512" style="height:30px;width:35px;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#E33D85;overflow:visible;position:relative;"><path d="M581 226.6C581 119.1 450.9 32 290.5 32S0 119.1 0 226.6C0 322.4 103.3 402 239.4 418.1V480h99.1v-61.5c24.3-2.7 47.6-7.4 69.4-13.9L448 480h112l-67.4-113.7c54.5-35.4 88.4-84.9 88.4-139.7zm-466.8 14.5c0-73.5 98.9-133 220.8-133s211.9 40.7 211.9 133c0 50.1-26.5 85-70.3 106.4-2.4-1.6-4.7-2.9-6.4-3.7-10.2-5.2-27.8-10.5-27.8-10.5s86.6-6.4 86.6-92.7-90.6-87.9-90.6-87.9h-199V361c-74.1-21.5-125.2-67.1-125.2-119.9zm225.1 38.3v-55.6c57.8 0 87.8-6.8 87.8 27.3 0 36.5-38.2 28.3-87.8 28.3zm-.9 72.5H365c10.8 0 18.9 11.7 24 19.2-16.1 1.9-33 2.8-50.6 2.9v-22.1z"/></svg>
+]
+
+
+
+![](intro2R_files/figure-html/unnamed-chunk-100-1.png)&lt;!-- --&gt;
+
+---
+#Data Visualization with {ggplot2}
+
+.footnote[
+<svg preserveAspectRatio="none" aria-hidden="true" role="img" viewBox="0 0 581 512" style="height:30px;width:35px;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#E33D85;overflow:visible;position:relative;"><path d="M581 226.6C581 119.1 450.9 32 290.5 32S0 119.1 0 226.6C0 322.4 103.3 402 239.4 418.1V480h99.1v-61.5c24.3-2.7 47.6-7.4 69.4-13.9L448 480h112l-67.4-113.7c54.5-35.4 88.4-84.9 88.4-139.7zm-466.8 14.5c0-73.5 98.9-133 220.8-133s211.9 40.7 211.9 133c0 50.1-26.5 85-70.3 106.4-2.4-1.6-4.7-2.9-6.4-3.7-10.2-5.2-27.8-10.5-27.8-10.5s86.6-6.4 86.6-92.7-90.6-87.9-90.6-87.9h-199V361c-74.1-21.5-125.2-67.1-125.2-119.9zm225.1 38.3v-55.6c57.8 0 87.8-6.8 87.8 27.3 0 36.5-38.2 28.3-87.8 28.3zm-.9 72.5H365c10.8 0 18.9 11.7 24 19.2-16.1 1.9-33 2.8-50.6 2.9v-22.1z"/></svg>
+]
+
+--
+
+
+
+```r
+ggplot(data = penguins, aes(x = species, y = flipper_length_mm))+ 
+  geom_boxplot(width = 0.2)+ geom_jitter(width = 0.1)+
+* ggdist::stat_halfeye(width = 0.3,justification = - .4)
+```
+
+![](intro2R_files/figure-html/unnamed-chunk-102-1.png)&lt;!-- --&gt;
+
+
+---
+
+#Data Visualization with {ggplot2}
+
+.footnote[
+<svg preserveAspectRatio="none" aria-hidden="true" role="img" viewBox="0 0 581 512" style="height:30px;width:35px;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#E33D85;overflow:visible;position:relative;"><path d="M581 226.6C581 119.1 450.9 32 290.5 32S0 119.1 0 226.6C0 322.4 103.3 402 239.4 418.1V480h99.1v-61.5c24.3-2.7 47.6-7.4 69.4-13.9L448 480h112l-67.4-113.7c54.5-35.4 88.4-84.9 88.4-139.7zm-466.8 14.5c0-73.5 98.9-133 220.8-133s211.9 40.7 211.9 133c0 50.1-26.5 85-70.3 106.4-2.4-1.6-4.7-2.9-6.4-3.7-10.2-5.2-27.8-10.5-27.8-10.5s86.6-6.4 86.6-92.7-90.6-87.9-90.6-87.9h-199V361c-74.1-21.5-125.2-67.1-125.2-119.9zm225.1 38.3v-55.6c57.8 0 87.8-6.8 87.8 27.3 0 36.5-38.2 28.3-87.8 28.3zm-.9 72.5H365c10.8 0 18.9 11.7 24 19.2-16.1 1.9-33 2.8-50.6 2.9v-22.1z"/></svg>
+]
+
+--
+
+
+
+
+```r
+ggplot(data = penguins, aes(x = species, y = flipper_length_mm, fill = species))+
+geom_boxplot(width = 0.2, alpha = 0.25,aes(color = species) )+ geom_jitter(width = 0.1, size = 2, alpha = 0.25, aes(color = species))+ 
+ggdist::stat_halfeye(width = 0.3,justification = - .4, alpha = 0.25)+
+scale_fill_manual(values = c("darkorange","purple","cyan4"))+
+scale_color_manual(values = c("darkorange","purple","cyan4"))+ theme_minimal()+ theme(legend.position = "none")+labs(x = "", y = "Flipper length (mm)")
+```
+
+![](intro2R_files/figure-html/unnamed-chunk-105-1.png)&lt;!-- --&gt;
+
+
+---
+
+#Data Visualization with {ggplot2}
+
+.footnote[
+<svg preserveAspectRatio="none" aria-hidden="true" role="img" viewBox="0 0 581 512" style="height:30px;width:35px;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#E33D85;overflow:visible;position:relative;"><path d="M581 226.6C581 119.1 450.9 32 290.5 32S0 119.1 0 226.6C0 322.4 103.3 402 239.4 418.1V480h99.1v-61.5c24.3-2.7 47.6-7.4 69.4-13.9L448 480h112l-67.4-113.7c54.5-35.4 88.4-84.9 88.4-139.7zm-466.8 14.5c0-73.5 98.9-133 220.8-133s211.9 40.7 211.9 133c0 50.1-26.5 85-70.3 106.4-2.4-1.6-4.7-2.9-6.4-3.7-10.2-5.2-27.8-10.5-27.8-10.5s86.6-6.4 86.6-92.7-90.6-87.9-90.6-87.9h-199V361c-74.1-21.5-125.2-67.1-125.2-119.9zm225.1 38.3v-55.6c57.8 0 87.8-6.8 87.8 27.3 0 36.5-38.2 28.3-87.8 28.3zm-.9 72.5H365c10.8 0 18.9 11.7 24 19.2-16.1 1.9-33 2.8-50.6 2.9v-22.1z"/></svg>
+]
+
+--
+
+
+
+
+```r
+ggplot(data = penguins, aes(x = species, y = flipper_length_mm, fill = species))+
+geom_boxplot(width = 0.2, alpha = 0.25,aes(color = species) )+ 
+*geom_point(shape = 95 ,width = 0.1, size = 10, alpha = 0.25, aes(color = species))+
+ggdist::stat_halfeye(width = 0.3,justification = - .4, alpha = 0.25)+
+scale_fill_manual(values = c("darkorange","purple","cyan4"))+
+scale_color_manual(values = c("darkorange","purple","cyan4"))+ theme_minimal()+ theme(legend.position = "none")+labs(x = "", y = "Flipper length (mm)")
+```
+
+![](intro2R_files/figure-html/unnamed-chunk-108-1.png)&lt;!-- --&gt;
+---
+
+#Acknowledgement
+
+- I owe every bit of coding knowledge because of the `rstats` community.
+
+- This slide was designed using [xaringan](https://github.com/yihui/xaringan)
+
+- This presentation is mostly inspired from 
+[Allison Horst](https://www.allisonhorst.com/), [Allison Hill](https://www.apreshill.com/), [Cédric Scherer](https://www.cedricscherer.com/), [Danielle Navarro](https://djnavarro.net/)
+
+- The data sets used in this package were &lt;br&gt;&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;1. penguins from `palmerpenguins` package &lt;br&gt;&lt;br&gt;
+&amp;nbsp;&amp;nbsp;&amp;nbsp;2. iris, USarrests from `datasets` package in built in R.
+
+---
+
+
+class: center, middle
+background-image: url("rocket.jpg")
+background-size: cover
+---
+
+class: center, middle
+background-image: url("end.jpg")
+background-size: cover
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "github",
+"highlightLines": true,
+"countIncrementalSlides": true
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+// add `data-at-shortcutkeys` attribute to <body> to resolve conflicts with JAWS
+// screen reader (see PR #262)
+(function(d) {
+  let res = {};
+  d.querySelectorAll('.remark-help-content table tr').forEach(tr => {
+    const t = tr.querySelector('td:nth-child(2)').innerText;
+    tr.querySelectorAll('td:first-child .key').forEach(key => {
+      const k = key.innerText;
+      if (/^[a-z]$/.test(k)) res[k] = t;  // must be a single letter (key)
+    });
+  });
+  d.body.setAttribute('data-at-shortcutkeys', JSON.stringify(res));
+})(document);
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>

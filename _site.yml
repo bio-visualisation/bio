@@ -21,6 +21,8 @@ navbar:
       menu:
         - text: "Tutorials"
           href: Tutorials.html
+        - text: "Slides"
+          href: intro2R.html
         - text: "------------"
         - text: "Data Visualization"
         - text: "Box Plot"
