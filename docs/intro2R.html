@@ -6,9 +6,20 @@
     <script src="site_libs/header-attrs-2.13/header-attrs.js"></script>
     <link href="site_libs/remark-css-0.0.1/default.css" rel="stylesheet" />
     <link href="site_libs/remark-css-0.0.1/default-fonts.css" rel="stylesheet" />
+    <link href="site_libs/tachyons-4.12.0/tachyons.min.css" rel="stylesheet" />
+    <link href="site_libs/panelset-0.2.6/panelset.css" rel="stylesheet" />
+    <script src="site_libs/panelset-0.2.6/panelset.js"></script>
+    <script src="site_libs/clipboard-2.0.6/clipboard.min.js"></script>
+    <link href="site_libs/xaringanExtra-clipboard-0.2.6/xaringanExtra-clipboard.css" rel="stylesheet" />
+    <script src="site_libs/xaringanExtra-clipboard-0.2.6/xaringanExtra-clipboard.js"></script>
+    <script>window.xaringanExtraClipboard(null, {"button":"Copy Code","success":"Copied!","error":"Press Ctrl+C to Copy"})</script>
+    <link href="site_libs/xaringanExtra-extra-styles-0.2.6/xaringanExtra-extra-styles.css" rel="stylesheet" />
+    <script src="site_libs/xaringanExtra_fit-screen-0.2.6/fit-screen.js"></script>
   </head>
   <body>
     <textarea id="source">
+
+
 
 
 class: center, bottom
@@ -23,15 +34,75 @@ background-image: url("start.jpg")
 
 ---
 
-#My Inspiration
+class: center, middle
 
-&lt;img src="danielle.jpg" width="30%" align= "left"/&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;
-&lt;pre class="tab"&gt;&lt;span style="font-size: 30pt; "&gt;Danielle Navarro&lt;/span&gt;&lt;/pre&gt;
-&lt;br&gt;&lt;br&gt;&lt;br&gt;
+.footnote[
+<svg preserveAspectRatio="none" aria-hidden="true" role="img" viewBox="0 0 581 512" style="height:30px;width:35px;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:steelblue;overflow:visible;position:relative;"><path d="M581 226.6C581 119.1 450.9 32 290.5 32S0 119.1 0 226.6C0 322.4 103.3 402 239.4 418.1V480h99.1v-61.5c24.3-2.7 47.6-7.4 69.4-13.9L448 480h112l-67.4-113.7c54.5-35.4 88.4-84.9 88.4-139.7zm-466.8 14.5c0-73.5 98.9-133 220.8-133s211.9 40.7 211.9 133c0 50.1-26.5 85-70.3 106.4-2.4-1.6-4.7-2.9-6.4-3.7-10.2-5.2-27.8-10.5-27.8-10.5s86.6-6.4 86.6-92.7-90.6-87.9-90.6-87.9h-199V361c-74.1-21.5-125.2-67.1-125.2-119.9zm225.1 38.3v-55.6c57.8 0 87.8-6.8 87.8 27.3 0 36.5-38.2 28.3-87.8 28.3zm-.9 72.5H365c10.8 0 18.9 11.7 24 19.2-16.1 1.9-33 2.8-50.6 2.9v-22.1z"/></svg>
+]
 
-&lt;img src="cedric.png" width="30%" align="right"/&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt; 
-&lt;pre class="tab"&gt;&lt;span style="font-size: 30pt; "&gt;       Cédric Scherer &lt;/span&gt;&lt;/pre&gt;
+# R is a language and environment &lt;br&gt;generally used for
 
+--
+
+Data Analysis
+
+--
+
+Data Visualization
+
+--
+
+Statistics
+
+--
+
+Making professional CV/Resume
+
+--
+
+Visual Blogs
+
+--
+
+Professional Website
+
+--
+
+Academic Paper/Book writing
+
+--
+
+And many more..
+
+---
+
+# What is R for a Biologist?
+
+.footnote[
+<svg preserveAspectRatio="none" aria-hidden="true" role="img" viewBox="0 0 581 512" style="height:30px;width:35px;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:steelblue;overflow:visible;position:relative;"><path d="M581 226.6C581 119.1 450.9 32 290.5 32S0 119.1 0 226.6C0 322.4 103.3 402 239.4 418.1V480h99.1v-61.5c24.3-2.7 47.6-7.4 69.4-13.9L448 480h112l-67.4-113.7c54.5-35.4 88.4-84.9 88.4-139.7zm-466.8 14.5c0-73.5 98.9-133 220.8-133s211.9 40.7 211.9 133c0 50.1-26.5 85-70.3 106.4-2.4-1.6-4.7-2.9-6.4-3.7-10.2-5.2-27.8-10.5-27.8-10.5s86.6-6.4 86.6-92.7-90.6-87.9-90.6-87.9h-199V361c-74.1-21.5-125.2-67.1-125.2-119.9zm225.1 38.3v-55.6c57.8 0 87.8-6.8 87.8 27.3 0 36.5-38.2 28.3-87.8 28.3zm-.9 72.5H365c10.8 0 18.9 11.7 24 19.2-16.1 1.9-33 2.8-50.6 2.9v-22.1z"/></svg>
+]
+
+--
+
+.dark-pink[Highthroughput data analysis]
+
+- RNA-Seq, ChIP-Seq etc.
+- Single-cell RNA-Seq
+- Proteomics study
+
+--
+
+.dark-pink['Out-of-the-box' plotting capabilities]
+
+- Better representation of data
+- Better insights of complex data
+- Interesting data visualization
+
+--
+
+.dark-pink[Hundreds of .underline['Bioconductor'] packages for biological data analysis]
+
+- An open source platform for R packages related to biological data analysis
 
 ---
 
@@ -56,8 +127,90 @@ https://cran.r-project.org/
 
 You are recommended to use the [RStudio IDE](https://www.rstudio.com/products/rstudio/) 
 
+
+
 ---
 
+# Rstudio has four main panels
+
+--
+
+![](r_panels.png)
+
+---
+
+# Rstudio has four main panels
+
+--
+
+- .dark-pink[Scripts] are the records of codes (like a recipe)
+
+--
+
+- .dark-pink[Console] is the place where a code is executed (cooking)
+
+--
+
+- .dark-pink[Environment] is like a kitchen where ingredients (data) and finished dishes (output) can be found.
+
+--
+
+- .dark-pink[Files] are the ingredients and .dark-pink[packages] are like tools (saucepan) in a kitchen.
+
+
+---
+
+# How to execute a code?
+
+--
+
+- To execute a line of code where cursor currently resides, press &lt;br&gt; **Ctrl + Enter** or use **Run** toolbar button
+
+--
+
+&lt;img src="run_code.jpg" width="80%" align="center"/&gt;
+
+--
+
+- Multiple lines of code can be selected and executed by similar way.
+
+---
+
+class: center, middle
+# Set the working directory
+
+.footnote[
+<svg preserveAspectRatio="none" aria-hidden="true" role="img" viewBox="0 0 581 512" style="height:30px;width:35px;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:steelblue;overflow:visible;position:relative;"><path d="M581 226.6C581 119.1 450.9 32 290.5 32S0 119.1 0 226.6C0 322.4 103.3 402 239.4 418.1V480h99.1v-61.5c24.3-2.7 47.6-7.4 69.4-13.9L448 480h112l-67.4-113.7c54.5-35.4 88.4-84.9 88.4-139.7zm-466.8 14.5c0-73.5 98.9-133 220.8-133s211.9 40.7 211.9 133c0 50.1-26.5 85-70.3 106.4-2.4-1.6-4.7-2.9-6.4-3.7-10.2-5.2-27.8-10.5-27.8-10.5s86.6-6.4 86.6-92.7-90.6-87.9-90.6-87.9h-199V361c-74.1-21.5-125.2-67.1-125.2-119.9zm225.1 38.3v-55.6c57.8 0 87.8-6.8 87.8 27.3 0 36.5-38.2 28.3-87.8 28.3zm-.9 72.5H365c10.8 0 18.9 11.7 24 19.2-16.1 1.9-33 2.8-50.6 2.9v-22.1z"/></svg>
+]
+
+--
+
+Before running any code, we need to set the working directory.
+
+--
+
+Go to .dark-blue[Session &gt; Set Working Directory &gt; Choose Directory]
+
+--
+
+&lt;img src="setwd.jpg" width="80%" align="center"/&gt;
+
+---
+
+class: center, middle
+# Set the working directory
+
+.footnote[
+<svg preserveAspectRatio="none" aria-hidden="true" role="img" viewBox="0 0 581 512" style="height:30px;width:35px;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:steelblue;overflow:visible;position:relative;"><path d="M581 226.6C581 119.1 450.9 32 290.5 32S0 119.1 0 226.6C0 322.4 103.3 402 239.4 418.1V480h99.1v-61.5c24.3-2.7 47.6-7.4 69.4-13.9L448 480h112l-67.4-113.7c54.5-35.4 88.4-84.9 88.4-139.7zm-466.8 14.5c0-73.5 98.9-133 220.8-133s211.9 40.7 211.9 133c0 50.1-26.5 85-70.3 106.4-2.4-1.6-4.7-2.9-6.4-3.7-10.2-5.2-27.8-10.5-27.8-10.5s86.6-6.4 86.6-92.7-90.6-87.9-90.6-87.9h-199V361c-74.1-21.5-125.2-67.1-125.2-119.9zm225.1 38.3v-55.6c57.8 0 87.8-6.8 87.8 27.3 0 36.5-38.2 28.3-87.8 28.3zm-.9 72.5H365c10.8 0 18.9 11.7 24 19.2-16.1 1.9-33 2.8-50.6 2.9v-22.1z"/></svg>
+]
+
+Alternatively, we can set the working directory by using &lt;br&gt; `setwd("path to directory")`
+
+--
+
+&lt;img src="setwd_1.png" width="80%" align="center"/&gt;
+
+---
 class: center, middle
 # Get Started
 
@@ -71,7 +224,7 @@ Open R Studio
 
 --
 
-&lt;span style="color: dodgerblue;"&gt;File &gt; New File &gt; R Script&lt;/span&gt;
+.dark-blue[File &gt; New File &gt; R Script]
 
 ---
 
@@ -87,20 +240,17 @@ Open R Studio
 
 ```r
 num &lt;- 2
-
-num
 ```
 
-```
-## [1] 2
-```
+- `num` holds the value 2
+
 ]
 
 --
 
 .pull-right[
 
-- num is called&lt;span style="color: deeppink;"&gt; "variable"&lt;/span&gt;
+- Here, `num` is a &lt;span style="color: deeppink;"&gt; "variable"&lt;/span&gt;
 
 - &lt;- is &lt;span style="color: deeppink;"&gt;"assignment operator"&lt;/span&gt;
 
@@ -110,6 +260,28 @@ num
 
 --
 
+.pull-left[
+
+Now, if we execute the variable `num`, it will return the value 2
+
+]
+
+--
+
+.pull-right[
+
+
+```r
+num
+```
+
+```
+## [1] 2
+```
+
+]
+
+--
 .pull-left[
 
 
@@ -133,13 +305,6 @@ fruits
 
 ]
 
---
-
------------------------------------------
-
---
-
-&gt; Please don't insert space in the middle of an "operator"
 
 ---
 
@@ -150,6 +315,7 @@ fruits
 ]
 
 --
+
 - &lt;span style="color: blue;"&gt;int&lt;/span&gt; for integers.
 
 - &lt;span style="color: blue;"&gt;dbl&lt;/span&gt; for doubles or real numbers.
@@ -194,7 +360,7 @@ print(my_name)
 .pull-right[
 
 - It cannot include &lt;span style="color: deeppink;"&gt;space&lt;/span&gt;. &lt;br&gt;&lt;br&gt;
-  e.g. &lt;span style="color: blue;"&gt;"my sale"&lt;/span&gt; is not valid. But &lt;br&gt;&lt;br&gt;&lt;span style="color: blue;"&gt;"my_sale"&lt;/span&gt; or &lt;span style="color: blue;"&gt;"my.sale"&lt;/span&gt; is perfect
+  e.g. &lt;span style="color: blue;"&gt;"my name"&lt;/span&gt; is not valid. But &lt;br&gt;&lt;br&gt;&lt;span style="color: blue;"&gt;"my_name"&lt;/span&gt; or &lt;span style="color: blue;"&gt;"my.name"&lt;/span&gt; is perfect
  ] 
 
 --
@@ -221,7 +387,7 @@ print(my_name)
 --
 .pull-right[
 &lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;
-- It is &lt;span style="color: deeppink;"&gt;case sensitive&lt;/span&gt;.
+- Variable is &lt;span style="color: deeppink;"&gt;case sensitive&lt;/span&gt;.
 
 ]
 
@@ -230,7 +396,7 @@ print(my_name)
 #Vector
 
 .footnote[
-<svg preserveAspectRatio="none" aria-hidden="true" role="img" viewBox="0 0 581 512" style="height:30px;width:35px;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#E33D85;overflow:visible;position:relative;"><path d="M581 226.6C581 119.1 450.9 32 290.5 32S0 119.1 0 226.6C0 322.4 103.3 402 239.4 418.1V480h99.1v-61.5c24.3-2.7 47.6-7.4 69.4-13.9L448 480h112l-67.4-113.7c54.5-35.4 88.4-84.9 88.4-139.7zm-466.8 14.5c0-73.5 98.9-133 220.8-133s211.9 40.7 211.9 133c0 50.1-26.5 85-70.3 106.4-2.4-1.6-4.7-2.9-6.4-3.7-10.2-5.2-27.8-10.5-27.8-10.5s86.6-6.4 86.6-92.7-90.6-87.9-90.6-87.9h-199V361c-74.1-21.5-125.2-67.1-125.2-119.9zm225.1 38.3v-55.6c57.8 0 87.8-6.8 87.8 27.3 0 36.5-38.2 28.3-87.8 28.3zm-.9 72.5H365c10.8 0 18.9 11.7 24 19.2-16.1 1.9-33 2.8-50.6 2.9v-22.1z"/></svg>
+<svg preserveAspectRatio="none" aria-hidden="true" role="img" viewBox="0 0 581 512" style="height:20px;width:20px;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#E33D85;overflow:visible;position:relative;"><path d="M581 226.6C581 119.1 450.9 32 290.5 32S0 119.1 0 226.6C0 322.4 103.3 402 239.4 418.1V480h99.1v-61.5c24.3-2.7 47.6-7.4 69.4-13.9L448 480h112l-67.4-113.7c54.5-35.4 88.4-84.9 88.4-139.7zm-466.8 14.5c0-73.5 98.9-133 220.8-133s211.9 40.7 211.9 133c0 50.1-26.5 85-70.3 106.4-2.4-1.6-4.7-2.9-6.4-3.7-10.2-5.2-27.8-10.5-27.8-10.5s86.6-6.4 86.6-92.7-90.6-87.9-90.6-87.9h-199V361c-74.1-21.5-125.2-67.1-125.2-119.9zm225.1 38.3v-55.6c57.8 0 87.8-6.8 87.8 27.3 0 36.5-38.2 28.3-87.8 28.3zm-.9 72.5H365c10.8 0 18.9 11.7 24 19.2-16.1 1.9-33 2.8-50.6 2.9v-22.1z"/></svg>
 ]
 
 --
@@ -266,6 +432,22 @@ my_value[3]
 ## [1] 9
 ```
 
+]
+
+--
+.pull-right[
+
+- Square brackets [] identify the position within a vector **(index)**
+
+- This index can be used to extract relevant values
+
+]
+
+--
+
+.pull-left[
+
+
 ```r
 my_value[3] &lt;- "gene"
 
@@ -277,17 +459,11 @@ my_value
 ```
 
 ]
-
 --
+
 .pull-right[
 
-- Slicing the vector by index
-
-&lt;br&gt;
-&lt;br&gt;
-&lt;br&gt;
-
-- Altering the vector
+- **Index** can be used to modify the vector
 ]
 
 ---
@@ -341,6 +517,7 @@ class: center, middle
 
 
 ---
+
 class: center, middle
 background-image: url("thoughts.jpg")
 background-size: cover
@@ -423,6 +600,7 @@ round(x = 3.141592, digits = 2)
 - (&lt;span style="font-size: 15pt; color: seagreen; "&gt; "Arguments" &lt;/span&gt;) are kept within the parentheses.&lt;br&gt;&lt;br&gt; 
 - If multiple arguments present, that must be separated by comma.
 ]
+
 ---
 
 class: inverse, center, middle
@@ -460,28 +638,25 @@ library(palmerpenguins)
 
 ]
 ---
-
 #Data Frames
 
 .footnote[
 <svg preserveAspectRatio="none" aria-hidden="true" role="img" viewBox="0 0 581 512" style="height:30px;width:35px;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#E33D85;overflow:visible;position:relative;"><path d="M581 226.6C581 119.1 450.9 32 290.5 32S0 119.1 0 226.6C0 322.4 103.3 402 239.4 418.1V480h99.1v-61.5c24.3-2.7 47.6-7.4 69.4-13.9L448 480h112l-67.4-113.7c54.5-35.4 88.4-84.9 88.4-139.7zm-466.8 14.5c0-73.5 98.9-133 220.8-133s211.9 40.7 211.9 133c0 50.1-26.5 85-70.3 106.4-2.4-1.6-4.7-2.9-6.4-3.7-10.2-5.2-27.8-10.5-27.8-10.5s86.6-6.4 86.6-92.7-90.6-87.9-90.6-87.9h-199V361c-74.1-21.5-125.2-67.1-125.2-119.9zm225.1 38.3v-55.6c57.8 0 87.8-6.8 87.8 27.3 0 36.5-38.2 28.3-87.8 28.3zm-.9 72.5H365c10.8 0 18.9 11.7 24 19.2-16.1 1.9-33 2.8-50.6 2.9v-22.1z"/></svg>
 ]
 
-.pull-left[
 
+- `head()` function shows first few rows of the data frame `df`
 
-```r
-head(df, 2)
-```
-
-]
 
 --
 
-.pull-right[
 
-- `head()` function showing first two rows of the data frame `df`
-]
+
+```r
+head(df)
+```
+
+
 
 
 ---
@@ -517,22 +692,23 @@ df[1, 3]
 - Give me the value stored in &lt;span style="font-size: 15pt; color: deeppink; "&gt; first row, third column&lt;/span&gt; of `df`
 ]
 
---
+---
 
-.pull-left[
+#Data Frames
+
+.footnote[
+<svg preserveAspectRatio="none" aria-hidden="true" role="img" viewBox="0 0 581 512" style="height:30px;width:35px;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#E33D85;overflow:visible;position:relative;"><path d="M581 226.6C581 119.1 450.9 32 290.5 32S0 119.1 0 226.6C0 322.4 103.3 402 239.4 418.1V480h99.1v-61.5c24.3-2.7 47.6-7.4 69.4-13.9L448 480h112l-67.4-113.7c54.5-35.4 88.4-84.9 88.4-139.7zm-466.8 14.5c0-73.5 98.9-133 220.8-133s211.9 40.7 211.9 133c0 50.1-26.5 85-70.3 106.4-2.4-1.6-4.7-2.9-6.4-3.7-10.2-5.2-27.8-10.5-27.8-10.5s86.6-6.4 86.6-92.7-90.6-87.9-90.6-87.9h-199V361c-74.1-21.5-125.2-67.1-125.2-119.9zm225.1 38.3v-55.6c57.8 0 87.8-6.8 87.8 27.3 0 36.5-38.2 28.3-87.8 28.3zm-.9 72.5H365c10.8 0 18.9 11.7 24 19.2-16.1 1.9-33 2.8-50.6 2.9v-22.1z"/></svg>
+]
+
+- Give me the values of &lt;span style="font-size: 15pt; color: deeppink; "&gt; first row&lt;/span&gt; of `df` (all columns)
+
+
 
 
 ```r
 df[1,]
 ```
 
-]
-
---
-
-.pull-right[
-- Give me the values of &lt;span style="font-size: 15pt; color: deeppink; "&gt; first row&lt;/span&gt; of `df` (all columns)
-]
 ---
 
 #Data Frames
@@ -667,7 +843,6 @@ df[, "island"]
 
 .pull-right[
 
-
 ```r
 library(tidyverse)
 
@@ -685,10 +860,7 @@ df %&gt;%
 ## 2 Chinstrap                   48.8
 ## 3 Gentoo                      47.6
 ```
-
-
 ]
-
 
 --
 
@@ -713,6 +885,8 @@ background-image: url('tidy.jpg')
 --
 .pull-left[
 - `select()` &lt;span style="color: deeppink; "&gt; &lt;&lt; &lt;/span&gt;
+
+- `select()` function selects only user defined columns from a data frame
 
 &lt;br&gt;&lt;br&gt;
 &lt;img src="dplyr_logo.png" width="35%" style="display: block; margin: auto;" /&gt;
@@ -753,6 +927,8 @@ iris %&gt;%
 .pull-left[
 - `select()`
 - `filter()` &lt;span style="color: deeppink; "&gt; &lt;&lt; &lt;/span&gt;
+
+- `filter()` function helps to subset a data frame that satisfy a user defined condition.
 &lt;br&gt;&lt;br&gt;
 &lt;img src="filter.jpg" width="100%" height="100%" style="display: block; margin: auto;" /&gt;
 ]
@@ -820,9 +996,8 @@ iris %&gt;%
 ```
 
 ]
+
 ---
-
-
 #dplyr verbs
 
 .footnote[
@@ -962,15 +1137,18 @@ iris %&gt;%
 - `select()`
 - `filter()`
 - `arrange(desc())`
-]
---
-.pull-right[
 - `rename()` 
 - `mutate()`
 - `summarise()`&lt;span style="color: deeppink; "&gt; &lt;&lt; &lt;/span&gt;
-
 ]
---
+
+---
+
+#dplyr verbs
+
+.footnote[
+<svg preserveAspectRatio="none" aria-hidden="true" role="img" viewBox="0 0 581 512" style="height:30px;width:35px;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#E33D85;overflow:visible;position:relative;"><path d="M581 226.6C581 119.1 450.9 32 290.5 32S0 119.1 0 226.6C0 322.4 103.3 402 239.4 418.1V480h99.1v-61.5c24.3-2.7 47.6-7.4 69.4-13.9L448 480h112l-67.4-113.7c54.5-35.4 88.4-84.9 88.4-139.7zm-466.8 14.5c0-73.5 98.9-133 220.8-133s211.9 40.7 211.9 133c0 50.1-26.5 85-70.3 106.4-2.4-1.6-4.7-2.9-6.4-3.7-10.2-5.2-27.8-10.5-27.8-10.5s86.6-6.4 86.6-92.7-90.6-87.9-90.6-87.9h-199V361c-74.1-21.5-125.2-67.1-125.2-119.9zm225.1 38.3v-55.6c57.8 0 87.8-6.8 87.8 27.3 0 36.5-38.2 28.3-87.8 28.3zm-.9 72.5H365c10.8 0 18.9 11.7 24 19.2-16.1 1.9-33 2.8-50.6 2.9v-22.1z"/></svg>
+]
 
 
 ```r
@@ -990,6 +1168,8 @@ penguins %&gt;%
 ## 3 Gentoo              47.6       5092.              217.
 ```
 
+- across() function used as nested function here to apply summarize() function to multiple column&lt;br&gt;&lt;br&gt;
+- everything() used here for selecting all variables/columns 
 
 ---
 
@@ -1114,7 +1294,7 @@ head(data, 2)
 
 ```r
 data &lt;- USArrests %&gt;%
-  rownames_to_column(var = "State")
+* rownames_to_column(var = "State")
 head(data, 2)
 ```
 
@@ -1138,6 +1318,7 @@ head(data, 2)
 .pull-left[
 
 - `gather()` &lt;span style="color: deeppink; "&gt; &lt;&lt; &lt;/span&gt;
+- `gather()` makes "wide" data longer
 &lt;br&gt;&lt;br&gt;
 &lt;img src="tidyr.png" width="35%" style="display: block; margin: auto;" /&gt;
 ]
@@ -1164,7 +1345,9 @@ head(tidy_data)
 ## 6   Colorado Murder      7.9
 ```
 ]
+
 ---
+
 #Reshaping data with tidyr
 
 .footnote[
@@ -1176,6 +1359,7 @@ head(tidy_data)
 
 - `gather()`
 - `spread()` &lt;span style="color: deeppink; "&gt; &lt;&lt; &lt;/span&gt;
+- `spread()` makes "long" data wider
 &lt;br&gt;&lt;br&gt;
 &lt;img src="tidyr.png" width="35%" style="display: block; margin: auto;" /&gt;
 ]
@@ -1213,10 +1397,17 @@ head(orig_data[,1:3])
 --
 
 .pull-left[
-&lt;img src="readr.png" width="35%" style="display: block; margin: auto;" /&gt;
+&lt;img src="readr.png" width="30%" style="display: block; margin: auto;" /&gt;
+
+- `read_csv()` is used for data importing into R environment.
+
+- `write_csv()` is meant for saving any data frame as csv file into the current working directory. 
 ]
 
+
+
 --
+
 .pull-right[
 
 ```r
@@ -1231,10 +1422,19 @@ library(readr)
 
 ]
 
---
+---
+
+#Data Import and Export using readxl
+
+.footnote[
+<svg preserveAspectRatio="none" aria-hidden="true" role="img" viewBox="0 0 581 512" style="height:30px;width:35px;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#E33D85;overflow:visible;position:relative;"><path d="M581 226.6C581 119.1 450.9 32 290.5 32S0 119.1 0 226.6C0 322.4 103.3 402 239.4 418.1V480h99.1v-61.5c24.3-2.7 47.6-7.4 69.4-13.9L448 480h112l-67.4-113.7c54.5-35.4 88.4-84.9 88.4-139.7zm-466.8 14.5c0-73.5 98.9-133 220.8-133s211.9 40.7 211.9 133c0 50.1-26.5 85-70.3 106.4-2.4-1.6-4.7-2.9-6.4-3.7-10.2-5.2-27.8-10.5-27.8-10.5s86.6-6.4 86.6-92.7-90.6-87.9-90.6-87.9h-199V361c-74.1-21.5-125.2-67.1-125.2-119.9zm225.1 38.3v-55.6c57.8 0 87.8-6.8 87.8 27.3 0 36.5-38.2 28.3-87.8 28.3zm-.9 72.5H365c10.8 0 18.9 11.7 24 19.2-16.1 1.9-33 2.8-50.6 2.9v-22.1z"/></svg>
+]
 
 .pull-left[
-&lt;img src="readxl.png" width="35%" style="display: block; margin: auto;" /&gt;
+&lt;img src="readxl.png" width="30%" style="display: block; margin: auto;" /&gt;
+
+
+- `read_xlsx()` is used for data importing into R environment.
 ]
 
 --
@@ -1297,6 +1497,10 @@ background-image: url('viz1.jpg')
 &lt;img src="ge_data.png" width="100%" height="100%" style="display: block; margin: auto;" /&gt;
 
 - Data layer
+
+- It has only got input data. But the ggplot2 does not know what to plot. 
+
+- It returns an empty plot
 ]
 
 --
@@ -1309,11 +1513,12 @@ library(ggplot2)
 ggplot(data = penguins)
 ```
 
-![](intro2R_files/figure-html/unnamed-chunk-75-1.png)&lt;!-- --&gt;
+![](intro2R_files/figure-html/unnamed-chunk-84-1.png)&lt;!-- --&gt;
 
 ]
 
 ---
+
 #Data Visualization with {ggplot2}
 
 .footnote[
@@ -1342,7 +1547,7 @@ g &lt;- ggplot(data = penguins,
 g
 ```
 
-![](intro2R_files/figure-html/unnamed-chunk-78-1.png)&lt;!-- --&gt;
+![](intro2R_files/figure-html/unnamed-chunk-87-1.png)&lt;!-- --&gt;
 
 ]
 ---
@@ -1357,6 +1562,7 @@ g
 &lt;img src="ge_geom.png" width="100%" height="100%" style="display: block; margin: auto;" /&gt;
 
 - Geometries Layer
+- Here, we define what kind of plot we want (boxplot, histogram etc.)
 ]
 
 --
@@ -1367,7 +1573,7 @@ g
 *g + geom_point()
 ```
 
-![](intro2R_files/figure-html/unnamed-chunk-81-1.png)&lt;!-- --&gt;
+![](intro2R_files/figure-html/unnamed-chunk-90-1.png)&lt;!-- --&gt;
 
 ]
 ---
@@ -1393,7 +1599,7 @@ g + geom_point()+
 * facet_wrap(~ species)
 ```
 
-![](intro2R_files/figure-html/unnamed-chunk-84-1.png)&lt;!-- --&gt;
+![](intro2R_files/figure-html/unnamed-chunk-93-1.png)&lt;!-- --&gt;
 
 ]
 ---
@@ -1415,7 +1621,7 @@ g + geom_point()+
   facet_wrap(~ species)
 ```
 
-![](intro2R_files/figure-html/unnamed-chunk-86-1.png)&lt;!-- --&gt;
+![](intro2R_files/figure-html/unnamed-chunk-95-1.png)&lt;!-- --&gt;
 
 ---
 
@@ -1425,7 +1631,7 @@ g + geom_point()+
 <svg preserveAspectRatio="none" aria-hidden="true" role="img" viewBox="0 0 581 512" style="height:30px;width:35px;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#E33D85;overflow:visible;position:relative;"><path d="M581 226.6C581 119.1 450.9 32 290.5 32S0 119.1 0 226.6C0 322.4 103.3 402 239.4 418.1V480h99.1v-61.5c24.3-2.7 47.6-7.4 69.4-13.9L448 480h112l-67.4-113.7c54.5-35.4 88.4-84.9 88.4-139.7zm-466.8 14.5c0-73.5 98.9-133 220.8-133s211.9 40.7 211.9 133c0 50.1-26.5 85-70.3 106.4-2.4-1.6-4.7-2.9-6.4-3.7-10.2-5.2-27.8-10.5-27.8-10.5s86.6-6.4 86.6-92.7-90.6-87.9-90.6-87.9h-199V361c-74.1-21.5-125.2-67.1-125.2-119.9zm225.1 38.3v-55.6c57.8 0 87.8-6.8 87.8 27.3 0 36.5-38.2 28.3-87.8 28.3zm-.9 72.5H365c10.8 0 18.9 11.7 24 19.2-16.1 1.9-33 2.8-50.6 2.9v-22.1z"/></svg>
 ]
 
-![](intro2R_files/figure-html/unnamed-chunk-88-1.png)&lt;!-- --&gt;
+![](intro2R_files/figure-html/unnamed-chunk-97-1.png)&lt;!-- --&gt;
 
 ---
 
@@ -1446,10 +1652,9 @@ g + geom_point(aes(color = sex))+
 * facet_wrap(~ species)+ theme_minimal()
 ```
 
-![](intro2R_files/figure-html/unnamed-chunk-90-1.png)&lt;!-- --&gt;
+![](intro2R_files/figure-html/unnamed-chunk-99-1.png)&lt;!-- --&gt;
 
 ---
-
 #Data Visualization with {ggplot2}
 
 .footnote[
@@ -1469,7 +1674,7 @@ g + geom_point(aes(color = sex))+
   facet_wrap(~ species)+ theme_minimal()
 ```
 
-![](intro2R_files/figure-html/unnamed-chunk-92-1.png)&lt;!-- --&gt;
+![](intro2R_files/figure-html/unnamed-chunk-101-1.png)&lt;!-- --&gt;
 
 ---
 
@@ -1496,7 +1701,7 @@ ggplot(data = penguins %&gt;% drop_na(),
        color = "Penguin sex") #renaming legend title
 ```
 
-![](intro2R_files/figure-html/unnamed-chunk-94-1.png)&lt;!-- --&gt;
+![](intro2R_files/figure-html/unnamed-chunk-103-1.png)&lt;!-- --&gt;
 
 ---
 
@@ -1506,17 +1711,38 @@ ggplot(data = penguins %&gt;% drop_na(),
 <svg preserveAspectRatio="none" aria-hidden="true" role="img" viewBox="0 0 581 512" style="height:30px;width:35px;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#E33D85;overflow:visible;position:relative;"><path d="M581 226.6C581 119.1 450.9 32 290.5 32S0 119.1 0 226.6C0 322.4 103.3 402 239.4 418.1V480h99.1v-61.5c24.3-2.7 47.6-7.4 69.4-13.9L448 480h112l-67.4-113.7c54.5-35.4 88.4-84.9 88.4-139.7zm-466.8 14.5c0-73.5 98.9-133 220.8-133s211.9 40.7 211.9 133c0 50.1-26.5 85-70.3 106.4-2.4-1.6-4.7-2.9-6.4-3.7-10.2-5.2-27.8-10.5-27.8-10.5s86.6-6.4 86.6-92.7-90.6-87.9-90.6-87.9h-199V361c-74.1-21.5-125.2-67.1-125.2-119.9zm225.1 38.3v-55.6c57.8 0 87.8-6.8 87.8 27.3 0 36.5-38.2 28.3-87.8 28.3zm-.9 72.5H365c10.8 0 18.9 11.7 24 19.2-16.1 1.9-33 2.8-50.6 2.9v-22.1z"/></svg>
 ]
 
-
-
---
-
+.panelset[.panel[.panel-name[]
+&lt;div class="panel"&gt;
+&lt;div class="panel-name"&gt;Code&lt;/div&gt;
 
 ```r
-p + scale_color_manual(values = c("darkorange","cyan4"))
+ggplot(data = penguins %&gt;% drop_na(), 
+       aes(x = flipper_length_mm,
+           y = body_mass_g)) + 
+  geom_point(aes(color = sex), alpha = 0.50)+
+  facet_wrap(~ species)+ theme_minimal()+
+  labs(title = "Penguin flipper and body mass",
+       x = "Flipper length (mm)",
+       y = "Body mass (g)",
+       color = "Penguin sex")+
+  scale_color_manual(values = c("darkorange","cyan4"))+
+  theme(axis.title.x = element_text(size = 20),
+        axis.title.y = element_text(size = 20),
+        legend.title = element_text(size = 15),
+        plot.title = element_text(size = 25))
 ```
 
-![](intro2R_files/figure-html/unnamed-chunk-97-1.png)&lt;!-- --&gt;
 
+
+&lt;/div&gt;
+
+&lt;div class="panel"&gt;
+&lt;div class="panel-name"&gt;Plot&lt;/div&gt;
+
+![](intro2R_files/figure-html/unnamed-chunk-105-1.png)&lt;!-- --&gt;
+
+&lt;/div&gt;
+]]
 
 ---
 
@@ -1528,7 +1754,10 @@ p + scale_color_manual(values = c("darkorange","cyan4"))
 
 
 
-![](intro2R_files/figure-html/unnamed-chunk-100-1.png)&lt;!-- --&gt;
+
+
+
+![](intro2R_files/figure-html/unnamed-chunk-109-1.png)&lt;!-- --&gt;
 
 ---
 #Data Visualization with {ggplot2}
@@ -1547,8 +1776,48 @@ ggplot(data = penguins, aes(x = species, y = flipper_length_mm))+
 * ggdist::stat_halfeye(width = 0.3,justification = - .4)
 ```
 
-![](intro2R_files/figure-html/unnamed-chunk-102-1.png)&lt;!-- --&gt;
+![](intro2R_files/figure-html/unnamed-chunk-111-1.png)&lt;!-- --&gt;
 
+
+---
+
+#Data Visualization with {ggplot2}
+
+.footnote[
+<svg preserveAspectRatio="none" aria-hidden="true" role="img" viewBox="0 0 581 512" style="height:30px;width:35px;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#E33D85;overflow:visible;position:relative;"><path d="M581 226.6C581 119.1 450.9 32 290.5 32S0 119.1 0 226.6C0 322.4 103.3 402 239.4 418.1V480h99.1v-61.5c24.3-2.7 47.6-7.4 69.4-13.9L448 480h112l-67.4-113.7c54.5-35.4 88.4-84.9 88.4-139.7zm-466.8 14.5c0-73.5 98.9-133 220.8-133s211.9 40.7 211.9 133c0 50.1-26.5 85-70.3 106.4-2.4-1.6-4.7-2.9-6.4-3.7-10.2-5.2-27.8-10.5-27.8-10.5s86.6-6.4 86.6-92.7-90.6-87.9-90.6-87.9h-199V361c-74.1-21.5-125.2-67.1-125.2-119.9zm225.1 38.3v-55.6c57.8 0 87.8-6.8 87.8 27.3 0 36.5-38.2 28.3-87.8 28.3zm-.9 72.5H365c10.8 0 18.9 11.7 24 19.2-16.1 1.9-33 2.8-50.6 2.9v-22.1z"/></svg>
+]
+
+.panelset[.panel[.panel-name[]
+&lt;div class="panel"&gt;
+&lt;div class="panel-name"&gt;Code&lt;/div&gt;
+
+```r
+ggplot(data = penguins, aes(x = species, 
+                            y = flipper_length_mm, 
+                            fill = species))+
+geom_boxplot(width = 0.2, alpha = 0.25,
+             aes(color = species) )+ 
+  geom_jitter(width = 0.1, size = 2, 
+              alpha = 0.25, aes(color = species))+ 
+ggdist::stat_halfeye(width = 0.3,justification = - .4, alpha = 0.25)+
+scale_fill_manual(values = c("darkorange","purple","cyan4"))+
+scale_color_manual(values = c("darkorange","purple","cyan4"))+ 
+  theme_minimal()+ 
+  theme(legend.position = "none")+
+  labs(x = "", y = "Flipper length (mm)")
+```
+
+
+
+&lt;/div&gt;
+
+&lt;div class="panel"&gt;
+&lt;div class="panel-name"&gt;Plot&lt;/div&gt;
+
+![](intro2R_files/figure-html/unnamed-chunk-113-1.png)&lt;!-- --&gt;
+
+&lt;/div&gt;
+]]
 
 ---
 
@@ -1561,42 +1830,40 @@ ggplot(data = penguins, aes(x = species, y = flipper_length_mm))+
 --
 
 
-
-
-```r
-ggplot(data = penguins, aes(x = species, y = flipper_length_mm, fill = species))+
-geom_boxplot(width = 0.2, alpha = 0.25,aes(color = species) )+ geom_jitter(width = 0.1, size = 2, alpha = 0.25, aes(color = species))+ 
-ggdist::stat_halfeye(width = 0.3,justification = - .4, alpha = 0.25)+
-scale_fill_manual(values = c("darkorange","purple","cyan4"))+
-scale_color_manual(values = c("darkorange","purple","cyan4"))+ theme_minimal()+ theme(legend.position = "none")+labs(x = "", y = "Flipper length (mm)")
-```
-
-![](intro2R_files/figure-html/unnamed-chunk-105-1.png)&lt;!-- --&gt;
-
-
----
-
-#Data Visualization with {ggplot2}
-
-.footnote[
-<svg preserveAspectRatio="none" aria-hidden="true" role="img" viewBox="0 0 581 512" style="height:30px;width:35px;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:#E33D85;overflow:visible;position:relative;"><path d="M581 226.6C581 119.1 450.9 32 290.5 32S0 119.1 0 226.6C0 322.4 103.3 402 239.4 418.1V480h99.1v-61.5c24.3-2.7 47.6-7.4 69.4-13.9L448 480h112l-67.4-113.7c54.5-35.4 88.4-84.9 88.4-139.7zm-466.8 14.5c0-73.5 98.9-133 220.8-133s211.9 40.7 211.9 133c0 50.1-26.5 85-70.3 106.4-2.4-1.6-4.7-2.9-6.4-3.7-10.2-5.2-27.8-10.5-27.8-10.5s86.6-6.4 86.6-92.7-90.6-87.9-90.6-87.9h-199V361c-74.1-21.5-125.2-67.1-125.2-119.9zm225.1 38.3v-55.6c57.8 0 87.8-6.8 87.8 27.3 0 36.5-38.2 28.3-87.8 28.3zm-.9 72.5H365c10.8 0 18.9 11.7 24 19.2-16.1 1.9-33 2.8-50.6 2.9v-22.1z"/></svg>
-]
-
---
-
-
-
+.panelset[.panel[.panel-name[]
+&lt;div class="panel"&gt;
+&lt;div class="panel-name"&gt;Code&lt;/div&gt;
 
 ```r
-ggplot(data = penguins, aes(x = species, y = flipper_length_mm, fill = species))+
-geom_boxplot(width = 0.2, alpha = 0.25,aes(color = species) )+ 
-*geom_point(shape = 95 ,width = 0.1, size = 10, alpha = 0.25, aes(color = species))+
-ggdist::stat_halfeye(width = 0.3,justification = - .4, alpha = 0.25)+
+ggplot(data = penguins, aes(x = species, 
+                            y = flipper_length_mm, 
+                            fill = species))+
+geom_boxplot(width = 0.2, alpha = 0.25,
+             aes(color = species))+ 
+geom_point(shape = 95 ,width = 0.1, 
+           size = 10, alpha = 0.25, 
+           aes(color = species))+ 
+ggdist::stat_halfeye(width = 0.3,
+                     justification = - .4, 
+                     alpha = 0.25)+
 scale_fill_manual(values = c("darkorange","purple","cyan4"))+
-scale_color_manual(values = c("darkorange","purple","cyan4"))+ theme_minimal()+ theme(legend.position = "none")+labs(x = "", y = "Flipper length (mm)")
+scale_color_manual(values = c("darkorange","purple","cyan4"))+ 
+  theme_minimal()+ 
+  theme(legend.position = "none")+
+  labs(x = "", y = "Flipper length (mm)")
 ```
 
-![](intro2R_files/figure-html/unnamed-chunk-108-1.png)&lt;!-- --&gt;
+
+
+&lt;/div&gt;
+
+&lt;div class="panel"&gt;
+&lt;div class="panel-name"&gt;Plot&lt;/div&gt;
+
+![](intro2R_files/figure-html/unnamed-chunk-116-1.png)&lt;!-- --&gt;
+
+&lt;/div&gt;
+]]
 ---
 
 #Acknowledgement
@@ -1614,6 +1881,18 @@ scale_color_manual(values = c("darkorange","purple","cyan4"))+ theme_minimal()+ 
 
 ---
 
+#My Inspiration
+
+&lt;img src="danielle.jpg" width="30%" align= "left"/&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;
+&lt;pre class="tab"&gt;&lt;span style="font-size: 30pt; "&gt;Danielle Navarro&lt;/span&gt;&lt;/pre&gt;
+&lt;br&gt;&lt;br&gt;&lt;br&gt;
+
+&lt;img src="cedric.png" width="30%" align="right"/&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt; 
+&lt;pre class="tab"&gt;&lt;span style="font-size: 30pt; "&gt;       Cédric Scherer &lt;/span&gt;&lt;/pre&gt;
+
+
+---
+
 
 class: center, middle
 background-image: url("rocket.jpg")
@@ -1623,6 +1902,8 @@ background-size: cover
 class: center, middle
 background-image: url("end.jpg")
 background-size: cover
+
+
     </textarea>
 <style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
 <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>

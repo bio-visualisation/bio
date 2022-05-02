@@ -8,6 +8,18 @@ output:
       countIncrementalSlides: true
 ---
 
+```{r xaringanExtra, echo=FALSE}
+xaringanExtra::use_xaringan_extra(c("panelset", "tachyons",
+                                    "extra_styles", "clipboard"))
+xaringanExtra::use_extra_styles(
+  hover_code_line = TRUE,         
+  mute_unhighlighted_code = TRUE  
+)
+
+xaringanExtra::use_fit_screen()
+
+```
+
 class: center, bottom
 background-image: url("start.jpg")
 <span style="font-size: 50pt; ">See What You R</span> <br><br>
@@ -20,15 +32,79 @@ background-image: url("start.jpg")
 
 ---
 
-#My Inspiration
+class: center, middle
 
-<img src="danielle.jpg" width="30%" align= "left"/><br><br><br>
-<pre class="tab"><span style="font-size: 30pt; ">Danielle Navarro</span></pre>
-<br><br><br>
+.footnote[
+```{r, echo= FALSE}
+fontawesome::fa("r-project", fill = "steelblue", height = "30px", width = "35px")
+```
+]
 
-<img src="cedric.png" width="30%" align="right"/><br><br><br> 
-<pre class="tab"><span style="font-size: 30pt; ">       Cédric Scherer </span></pre>
+# R is a language and environment <br>generally used for
 
+--
+
+Data Analysis
+
+--
+
+Data Visualization
+
+--
+
+Statistics
+
+--
+
+Making professional CV/Resume
+
+--
+
+Visual Blogs
+
+--
+
+Professional Website
+
+--
+
+Academic Paper/Book writing
+
+--
+
+And many more..
+
+---
+
+# What is R for a Biologist?
+
+.footnote[
+```{r, echo= FALSE}
+fontawesome::fa("r-project", fill = "steelblue", height = "30px", width = "35px")
+```
+]
+
+--
+
+.dark-pink[Highthroughput data analysis]
+
+- RNA-Seq, ChIP-Seq etc.
+- Single-cell RNA-Seq
+- Proteomics study
+
+--
+
+.dark-pink['Out-of-the-box' plotting capabilities]
+
+- Better representation of data
+- Better insights of complex data
+- Interesting data visualization
+
+--
+
+.dark-pink[Hundreds of .underline['Bioconductor'] packages for biological data analysis]
+
+- An open source platform for R packages related to biological data analysis
 
 ---
 
@@ -57,8 +133,94 @@ https://cran.r-project.org/
 
 You are recommended to use the [RStudio IDE](https://www.rstudio.com/products/rstudio/) 
 
+
+
 ---
 
+# Rstudio has four main panels
+
+--
+
+![](r_panels.png)
+
+---
+
+# Rstudio has four main panels
+
+--
+
+- .dark-pink[Scripts] are the records of codes (like a recipe)
+
+--
+
+- .dark-pink[Console] is the place where a code is executed (cooking)
+
+--
+
+- .dark-pink[Environment] is like a kitchen where ingredients (data) and finished dishes (output) can be found.
+
+--
+
+- .dark-pink[Files] are the ingredients and .dark-pink[packages] are like tools (saucepan) in a kitchen.
+
+
+---
+
+# How to execute a code?
+
+--
+
+- To execute a line of code where cursor currently resides, press <br> **Ctrl + Enter** or use **Run** toolbar button
+
+--
+
+<img src="run_code.jpg" width="80%" align="center"/>
+
+--
+
+- Multiple lines of code can be selected and executed by similar way.
+
+---
+
+class: center, middle
+# Set the working directory
+
+.footnote[
+```{r, echo= FALSE}
+fontawesome::fa("r-project", fill = "steelblue", height = "30px", width = "35px")
+```
+]
+
+--
+
+Before running any code, we need to set the working directory.
+
+--
+
+Go to .dark-blue[Session > Set Working Directory > Choose Directory]
+
+--
+
+<img src="setwd.jpg" width="80%" align="center"/>
+
+---
+
+class: center, middle
+# Set the working directory
+
+.footnote[
+```{r, echo= FALSE}
+fontawesome::fa("r-project", fill = "steelblue", height = "30px", width = "35px")
+```
+]
+
+Alternatively, we can set the working directory by using <br> `setwd("path to directory")`
+
+--
+
+<img src="setwd_1.png" width="80%" align="center"/>
+
+---
 class: center, middle
 # Get Started
 
@@ -74,7 +236,7 @@ Open R Studio
 
 --
 
-<span style="color: dodgerblue;">File > New File > R Script</span>
+.dark-blue[File > New File > R Script]
 
 ---
 
@@ -91,16 +253,17 @@ fontawesome::fa("r-project", fill = "#E33D85", height = "30px", width = "35px")
 .pull-left[
 ```{r}
 num <- 2
-
-num
 ```
+
+- `num` holds the value 2
+
 ]
 
 --
 
 .pull-right[
 
-- num is called<span style="color: deeppink;"> "variable"</span>
+- Here, `num` is a <span style="color: deeppink;"> "variable"</span>
 
 - <- is <span style="color: deeppink;">"assignment operator"</span>
 
@@ -110,6 +273,23 @@ num
 
 --
 
+.pull-left[
+
+Now, if we execute the variable `num`, it will return the value 2
+
+]
+
+--
+
+.pull-right[
+
+```{r}
+num
+```
+
+]
+
+--
 .pull-left[
 
 ```{r}
@@ -128,13 +308,6 @@ fruits
 
 ]
 
---
-
------------------------------------------
-
---
-
-> Please don't insert space in the middle of an "operator"
 
 ---
 
@@ -147,6 +320,7 @@ fontawesome::fa("r-project", fill = "#E33D85", height = "30px", width = "35px")
 ]
 
 --
+
 - <span style="color: blue;">int</span> for integers.
 
 - <span style="color: blue;">dbl</span> for doubles or real numbers.
@@ -189,7 +363,7 @@ print(my_name)
 .pull-right[
 
 - It cannot include <span style="color: deeppink;">space</span>. <br><br>
-  e.g. <span style="color: blue;">"my sale"</span> is not valid. But <br><br><span style="color: blue;">"my_sale"</span> or <span style="color: blue;">"my.sale"</span> is perfect
+  e.g. <span style="color: blue;">"my name"</span> is not valid. But <br><br><span style="color: blue;">"my_name"</span> or <span style="color: blue;">"my.name"</span> is perfect
  ] 
 
 --
@@ -204,7 +378,7 @@ print(my_name)
 --
 .pull-right[
 <br><br><br><br>
-- It is <span style="color: deeppink;">case sensitive</span>.
+- Variable is <span style="color: deeppink;">case sensitive</span>.
 
 ]
 
@@ -214,7 +388,7 @@ print(my_name)
 
 .footnote[
 ```{r, echo= FALSE}
-fontawesome::fa("r-project", fill = "#E33D85", height = "30px", width = "35px")
+fontawesome::fa("r-project", fill = "#E33D85", height = "20px", width = "20px")
 ```
 ]
 
@@ -239,10 +413,6 @@ my_value
 
 ```{r}
 my_value[3]
-
-my_value[3] <- "gene"
-
-my_value
 ```
 
 ]
@@ -250,13 +420,28 @@ my_value
 --
 .pull-right[
 
-- Slicing the vector by index
+- Square brackets [] identify the position within a vector **(index)**
 
-<br>
-<br>
-<br>
+- This index can be used to extract relevant values
 
-- Altering the vector
+]
+
+--
+
+.pull-left[
+
+```{r}
+my_value[3] <- "gene"
+
+my_value
+```
+
+]
+--
+
+.pull-right[
+
+- **Index** can be used to modify the vector
 ]
 
 ---
@@ -312,6 +497,7 @@ fontawesome::fa("r-project", fill = "#E33D85", height = "30px", width = "35px")
 
 
 ---
+
 class: center, middle
 background-image: url("thoughts.jpg")
 background-size: cover
@@ -382,6 +568,7 @@ round(x = 3.141592, digits = 2)
 - (<span style="font-size: 15pt; color: seagreen; "> "Arguments" </span>) are kept within the parentheses.<br><br> 
 - If multiple arguments present, that must be separated by comma.
 ]
+
 ---
 
 class: inverse, center, middle
@@ -420,7 +607,6 @@ df <- penguins #<<
 
 ]
 ---
-
 #Data Frames
 
 .footnote[
@@ -429,20 +615,18 @@ fontawesome::fa("r-project", fill = "#E33D85", height = "30px", width = "35px")
 ```
 ]
 
-.pull-left[
 
-```{r, eval=FALSE}
-head(df, 2)
-```
+- `head()` function shows first few rows of the data frame `df`
 
-]
 
 --
 
-.pull-right[
 
-- `head()` function showing first two rows of the data frame `df`
-]
+```{r, eval=FALSE}
+head(df)
+```
+
+
 
 
 ---
@@ -472,21 +656,24 @@ df[1, 3]
 - Give me the value stored in <span style="font-size: 15pt; color: deeppink; "> first row, third column</span> of `df`
 ]
 
---
+---
 
-.pull-left[
+#Data Frames
+
+.footnote[
+```{r, echo= FALSE}
+fontawesome::fa("r-project", fill = "#E33D85", height = "30px", width = "35px")
+```
+]
+
+- Give me the values of <span style="font-size: 15pt; color: deeppink; "> first row</span> of `df` (all columns)
+
+
 
 ```{r, eval=FALSE}
 df[1,]
 ```
 
-]
-
---
-
-.pull-right[
-- Give me the values of <span style="font-size: 15pt; color: deeppink; "> first row</span> of `df` (all columns)
-]
 ---
 
 #Data Frames
@@ -586,8 +773,7 @@ knitr::include_graphics('pipe.jpg')
 --
 
 .pull-right[
-
-```{r, message=FALSE, warning=FALSE}
+```{r,message=FALSE, warning=FALSE}
 library(tidyverse)
 
 df %>%
@@ -595,10 +781,7 @@ df %>%
   drop_na()%>%
   summarize(mean(bill_length_mm))
 ```
-
-
 ]
-
 
 --
 
@@ -628,6 +811,8 @@ fontawesome::fa("r-project", fill = "#E33D85", height = "30px", width = "35px")
 --
 .pull-left[
 - `select()` <span style="color: deeppink; "> << </span>
+
+- `select()` function selects only user defined columns from a data frame
 
 <br><br>
 ```{r, out.width='35%', fig.align='center', fig.cap='', echo=FALSE}
@@ -662,6 +847,8 @@ fontawesome::fa("r-project", fill = "#E33D85", height = "30px", width = "35px")
 .pull-left[
 - `select()`
 - `filter()` <span style="color: deeppink; "> << </span>
+
+- `filter()` function helps to subset a data frame that satisfy a user defined condition.
 <br><br>
 ```{r, out.width='100%', out.height= '100%', fig.align='center', fig.cap='', echo=FALSE}
 knitr::include_graphics('filter.jpg')
@@ -712,9 +899,8 @@ iris %>%
 ```
 
 ]
+
 ---
-
-
 #dplyr verbs
 
 .footnote[
@@ -829,15 +1015,20 @@ fontawesome::fa("r-project", fill = "#E33D85", height = "30px", width = "35px")
 - `select()`
 - `filter()`
 - `arrange(desc())`
-]
---
-.pull-right[
 - `rename()` 
 - `mutate()`
 - `summarise()`<span style="color: deeppink; "> << </span>
-
 ]
---
+
+---
+
+#dplyr verbs
+
+.footnote[
+```{r, echo= FALSE}
+fontawesome::fa("r-project", fill = "#E33D85", height = "30px", width = "35px")
+```
+]
 
 ```{r, message=FALSE, warning=FALSE}
 penguins %>%
@@ -845,9 +1036,10 @@ penguins %>%
   drop_na()%>%
   select(bill_length_mm, body_mass_g, flipper_length_mm)%>%
   summarize(across(everything(), mean))#<<
-
 ```
 
+- across() function used as nested function here to apply summarize() function to multiple column<br><br>
+- everything() used here for selecting all variables/columns 
 
 ---
 
@@ -945,7 +1137,7 @@ data <- datasets::USArrests
 head(data, 2)
 
 data <- USArrests %>%
-  rownames_to_column(var = "State")
+  rownames_to_column(var = "State")#<<
 head(data, 2)
 ```
 
@@ -965,6 +1157,7 @@ fontawesome::fa("r-project", fill = "#E33D85", height = "30px", width = "35px")
 .pull-left[
 
 - `gather()` <span style="color: deeppink; "> << </span>
+- `gather()` makes "wide" data longer
 <br><br>
 ```{r, out.width='35%', fig.align='center', fig.cap='', echo=FALSE}
 knitr::include_graphics('tidyr.png')
@@ -983,7 +1176,9 @@ tidy_data <- gather( #<<
 head(tidy_data)
 ```
 ]
+
 ---
+
 #Reshaping data with tidyr
 
 .footnote[
@@ -997,6 +1192,7 @@ fontawesome::fa("r-project", fill = "#E33D85", height = "30px", width = "35px")
 
 - `gather()`
 - `spread()` <span style="color: deeppink; "> << </span>
+- `spread()` makes "long" data wider
 <br><br>
 ```{r, out.width='35%', fig.align='center', fig.cap='', echo=FALSE}
 knitr::include_graphics('tidyr.png')
@@ -1028,12 +1224,19 @@ fontawesome::fa("r-project", fill = "#E33D85", height = "30px", width = "35px")
 --
 
 .pull-left[
-```{r, out.width='35%', fig.align='center', fig.cap='', echo=FALSE}
+```{r, out.width='30%', fig.align='center', fig.cap='', echo=FALSE}
 knitr::include_graphics('readr.png')
 ```
+
+- `read_csv()` is used for data importing into R environment.
+
+- `write_csv()` is meant for saving any data frame as csv file into the current working directory. 
 ]
 
+
+
 --
+
 .pull-right[
 ```{r, eval=FALSE}
 library(readr)
@@ -1047,12 +1250,23 @@ write_csv(x = data,#<<
 
 ]
 
---
+---
+
+#Data Import and Export using readxl
+
+.footnote[
+```{r, echo= FALSE}
+fontawesome::fa("r-project", fill = "#E33D85", height = "30px", width = "35px")
+```
+]
 
 .pull-left[
-```{r, out.width='35%', fig.align='center', fig.cap='', echo=FALSE}
+```{r, out.width='30%', fig.align='center', fig.cap='', echo=FALSE}
 knitr::include_graphics('readxl.png')
 ```
+
+
+- `read_xlsx()` is used for data importing into R environment.
 ]
 
 --
@@ -1125,6 +1339,10 @@ knitr::include_graphics('ge_data.png')
 ```
 
 - Data layer
+
+- It has only got input data. But the ggplot2 does not know what to plot. 
+
+- It returns an empty plot
 ]
 
 --
@@ -1139,6 +1357,7 @@ ggplot(data = penguins)
 ]
 
 ---
+
 #Data Visualization with {ggplot2}
 
 .footnote[
@@ -1187,12 +1406,13 @@ knitr::include_graphics('ge_geom.png')
 ```
 
 - Geometries Layer
+- Here, we define what kind of plot we want (boxplot, histogram etc.)
 ]
 
 --
 
 .pull-right[
-```{r dpi=600, message=FALSE, warning=FALSE, fig.height=4,fig.width=4}
+```{r dpi=300, message=FALSE, warning=FALSE, fig.height=4,fig.width=4}
 g + geom_point()#<<
 ```
 
@@ -1218,7 +1438,7 @@ knitr::include_graphics('ge_facet.png')
 --
 
 .pull-right[
-```{r dpi=600, message=FALSE, warning=FALSE, fig.height=4,fig.width=8}
+```{r dpi=300, message=FALSE, warning=FALSE, fig.height=4,fig.width=8}
 g + geom_point()+
   facet_wrap(~ species)#<<
 ```
@@ -1239,7 +1459,7 @@ fontawesome::fa("r-project", fill = "#E33D85", height = "30px", width = "35px")
 --
 
 
-```{r dpi=600, message=FALSE, warning=FALSE, fig.height=4,fig.width=10}
+```{r dpi=300, message=FALSE, warning=FALSE, fig.height=4,fig.width=10}
 g + geom_point(aes(color = sex))+#<<
   facet_wrap(~ species)
 ```
@@ -1254,7 +1474,7 @@ fontawesome::fa("r-project", fill = "#E33D85", height = "30px", width = "35px")
 ```
 ]
 
-```{r dpi=600, echo=FALSE, warning=FALSE, message=FALSE, fig.height=6,fig.width=12}
+```{r dpi=300, echo=FALSE, warning=FALSE, message=FALSE, fig.height=6,fig.width=12}
 library(cowplot)
 p1 <- g + geom_point(aes(color = sex))+
   facet_wrap(~ species)+ theme_bw()+
@@ -1307,13 +1527,12 @@ fontawesome::fa("r-project", fill = "#E33D85", height = "30px", width = "35px")
 --
 
 
-```{r dpi=600, message=FALSE, warning=FALSE, fig.height=4,fig.width=10}
+```{r dpi=300, message=FALSE, warning=FALSE, fig.height=4,fig.width=10}
 g + geom_point(aes(color = sex))+
   facet_wrap(~ species)+ theme_minimal()#<<
 ```
 
 ---
-
 #Data Visualization with {ggplot2}
 
 .footnote[
@@ -1349,7 +1568,7 @@ fontawesome::fa("r-project", fill = "#E33D85", height = "30px", width = "35px")
 --
 
 
-```{r dpi=600, message=FALSE, warning=FALSE, fig.height=4,fig.width=12}
+```{r dpi=300, message=FALSE, warning=FALSE, fig.height=4,fig.width=12}
 ggplot(data = penguins %>% drop_na(), 
        aes(x = flipper_length_mm,
            y = body_mass_g)) + geom_point(aes(color = sex))+
@@ -1370,25 +1589,24 @@ fontawesome::fa("r-project", fill = "#E33D85", height = "30px", width = "35px")
 ```
 ]
 
-```{r, echo=FALSE}
-p <- ggplot(data = penguins %>% drop_na(), 
+.panelset[.panel[.panel-name[]
+```{r panelset = c(source = "Code", output = "Plot"), fig.height=7,fig.width=17, dpi=300}
+ggplot(data = penguins %>% drop_na(), 
        aes(x = flipper_length_mm,
            y = body_mass_g)) + 
   geom_point(aes(color = sex), alpha = 0.50)+
   facet_wrap(~ species)+ theme_minimal()+
-  labs(title = "Penguin flipper and body mass",#<<
-       x = "Flipper length (mm)",#renaming x axis
-       y = "Body mass (g)",#renaming y axis
-       color = "Penguin sex") #renaming legend title
+  labs(title = "Penguin flipper and body mass",
+       x = "Flipper length (mm)",
+       y = "Body mass (g)",
+       color = "Penguin sex")+
+  scale_color_manual(values = c("darkorange","cyan4"))+
+  theme(axis.title.x = element_text(size = 20),
+        axis.title.y = element_text(size = 20),
+        legend.title = element_text(size = 15),
+        plot.title = element_text(size = 25))
 ```
-
---
-
-```{r dpi= 600, message=FALSE, warning=FALSE, fig.height=4,fig.width=12}
-
-p + scale_color_manual(values = c("darkorange","cyan4"))
-```
-
+]]
 
 ---
 
@@ -1400,10 +1618,28 @@ fontawesome::fa("r-project", fill = "#E33D85", height = "30px", width = "35px")
 ```
 ]
 
+```{r echo=FALSE}
+p <- ggplot(data = penguins %>% drop_na(), 
+       aes(x = flipper_length_mm,
+           y = body_mass_g)) + 
+  geom_point(aes(color = sex), alpha = 0.50)+
+  facet_wrap(~ species)+ theme_minimal()+
+  labs(title = "Penguin flipper and body mass",
+       x = "Flipper length (mm)",
+       y = "Body mass (g)",
+       color = "Penguin sex")+
+  theme(axis.title.x = element_text(size = 20),
+        axis.title.y = element_text(size = 20),
+        legend.title = element_text(size = 15),
+        plot.title = element_text(size = 25))+
+  scale_color_manual(values = c("darkorange","cyan4"))
+```
+
+
 ```{r, echo=FALSE}
 plot1 <- g + geom_point()+ facet_wrap(~ species)+
   labs(title = "Before")+ theme(plot.title = element_text(size = 22))
-plot2 <- p + scale_color_manual(values = c("darkorange","cyan4"))+ labs(title = "After")+ theme(plot.title = element_text(size = 22))
+plot2 <- p + labs(title = "After")+ theme(plot.title = element_text(size = 22))
 ```
 
 ```{r dpi= 600, message=FALSE, warning=FALSE, fig.height=7.5,fig.width=12, echo=FALSE}
@@ -1441,20 +1677,23 @@ fontawesome::fa("r-project", fill = "#E33D85", height = "30px", width = "35px")
 ```
 ]
 
---
-```{r, echo=FALSE}
-base <- ggplot(data = penguins, aes(x = species, y = flipper_length_mm))
-```
-
-
-```{r dpi= 600, message=FALSE, warning=FALSE, fig.height=5,fig.width=12}
-ggplot(data = penguins, aes(x = species, y = flipper_length_mm, fill = species))+
-geom_boxplot(width = 0.2, alpha = 0.25,aes(color = species) )+ geom_jitter(width = 0.1, size = 2, alpha = 0.25, aes(color = species))+ 
+.panelset[.panel[.panel-name[]
+```{r dpi= 600, message=FALSE, warning=FALSE, fig.height=5,fig.width=12, panelset = c(source = "Code", output = "Plot")}
+ggplot(data = penguins, aes(x = species, 
+                            y = flipper_length_mm, 
+                            fill = species))+
+geom_boxplot(width = 0.2, alpha = 0.25,
+             aes(color = species) )+ 
+  geom_jitter(width = 0.1, size = 2, 
+              alpha = 0.25, aes(color = species))+ 
 ggdist::stat_halfeye(width = 0.3,justification = - .4, alpha = 0.25)+
 scale_fill_manual(values = c("darkorange","purple","cyan4"))+
-scale_color_manual(values = c("darkorange","purple","cyan4"))+ theme_minimal()+ theme(legend.position = "none")+labs(x = "", y = "Flipper length (mm)")
+scale_color_manual(values = c("darkorange","purple","cyan4"))+ 
+  theme_minimal()+ 
+  theme(legend.position = "none")+
+  labs(x = "", y = "Flipper length (mm)")
 ```
-
+]]
 
 ---
 
@@ -1471,15 +1710,26 @@ fontawesome::fa("r-project", fill = "#E33D85", height = "30px", width = "35px")
 base <- ggplot(data = penguins, aes(x = species, y = flipper_length_mm))
 ```
 
-
-```{r dpi= 600, message=FALSE, warning=FALSE, fig.height=5,fig.width=12}
-ggplot(data = penguins, aes(x = species, y = flipper_length_mm, fill = species))+
-geom_boxplot(width = 0.2, alpha = 0.25,aes(color = species) )+ 
-geom_point(shape = 95 ,width = 0.1, size = 10, alpha = 0.25, aes(color = species))+#<< 
-ggdist::stat_halfeye(width = 0.3,justification = - .4, alpha = 0.25)+
+.panelset[.panel[.panel-name[]
+```{r dpi= 600, message=FALSE, warning=FALSE, fig.height=5,fig.width=12, panelset = c(source = "Code", output = "Plot")}
+ggplot(data = penguins, aes(x = species, 
+                            y = flipper_length_mm, 
+                            fill = species))+
+geom_boxplot(width = 0.2, alpha = 0.25,
+             aes(color = species))+ 
+geom_point(shape = 95 ,width = 0.1, 
+           size = 10, alpha = 0.25, 
+           aes(color = species))+ 
+ggdist::stat_halfeye(width = 0.3,
+                     justification = - .4, 
+                     alpha = 0.25)+
 scale_fill_manual(values = c("darkorange","purple","cyan4"))+
-scale_color_manual(values = c("darkorange","purple","cyan4"))+ theme_minimal()+ theme(legend.position = "none")+labs(x = "", y = "Flipper length (mm)")
+scale_color_manual(values = c("darkorange","purple","cyan4"))+ 
+  theme_minimal()+ 
+  theme(legend.position = "none")+
+  labs(x = "", y = "Flipper length (mm)")
 ```
+]]
 ---
 
 #Acknowledgement
@@ -1497,6 +1747,18 @@ scale_color_manual(values = c("darkorange","purple","cyan4"))+ theme_minimal()+ 
 
 ---
 
+#My Inspiration
+
+<img src="danielle.jpg" width="30%" align= "left"/><br><br><br>
+<pre class="tab"><span style="font-size: 30pt; ">Danielle Navarro</span></pre>
+<br><br><br>
+
+<img src="cedric.png" width="30%" align="right"/><br><br><br> 
+<pre class="tab"><span style="font-size: 30pt; ">       Cédric Scherer </span></pre>
+
+
+---
+
 
 class: center, middle
 background-image: url("rocket.jpg")
@@ -1506,3 +1768,5 @@ background-size: cover
 class: center, middle
 background-image: url("end.jpg")
 background-size: cover
+
+
